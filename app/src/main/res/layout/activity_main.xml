@@ -32,8 +32,27 @@
         android:background="@drawable/obj_top"
         android:layout_centerHorizontal="true"/>
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/bg_bottom"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="1dp"
+        android:gravity="center"
+        android:orientation="horizontal">
 
+        <Button
+            android:id="@+id/btn_subActivity1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연극의 이해" />
 
+        <Button
+            android:id="@+id/btn_subActivity2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="연극의 실제" />
+    </LinearLayout>
 
 
 </RelativeLayout>
