@@ -35,6 +35,33 @@
         <activity
             android:name=".RealityActivity"
             android:screenOrientation="landscape"/>
+        <activity
+            android:name=".ReadingActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".ColorActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".color.Red"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+
+        <activity
+            android:name=".color.Blue"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity
+            android:name=".color.Yellow"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity
+            android:name=".color.Gray"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
     </application>
 
 </manifest>

@@ -7,7 +7,7 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-
+//Main화면, 시작화면
     Button btn_sub_activity1;
     Button btn_sub_activity2;
 
