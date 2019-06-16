@@ -12,4 +12,53 @@
         <item name="android:windowFullscreen">true</item>
     </style>
 
+    <!-- 연극체험큐브 공통 스타일링 -->
+    <style name="Background">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/bg_full</item>
+    </style>
+
+    <style name="Background2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/bg_full2</item>
+    </style>
+
+    <style name="Container" parent="@android:style/Widget">
+        <item name="android:layout_marginTop">100dp</item>
+        <item name="android:layout_marginBottom">105dp</item>
+        <item name="android:layout_marginLeft">130dp</item>
+        <item name="android:layout_marginRight">130dp</item>
+        <item name="android:scrollbars">vertical</item>
+    </style>
+
+    <style name="Title" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">28sp</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:layout_marginTop">20dp</item>
+    </style>
+
+    <!-- 연극의 개념 커스텀 스타일링 -->
+    <style name="SubTitle" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">#a3312f</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="SubText" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">#a3312f</item>
+    </style>
+
 </resources>

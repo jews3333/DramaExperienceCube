@@ -1,12 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/Background2">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/Title"
         android:text="연극의 요소"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="배우(관객)"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="체험 중심 연극에서는 배우와 관객의 역할을 학생들이 동시에 수행하게 된다."/>
+            <TextView
+                style="@style/SubText"
+                android:text="배우 : 희곡에 나오는 인물의 역을 맡아 무대에서 표정, 몸짓 등의 동작과 대사로 극적 행위를 해 보이는 사람이다."/>
+            <TextView
+                style="@style/SubText"
+                android:text="관객 : 연극을 관람하는 사람이다."/>
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="희곡"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="연기를 위하여 쓰인 작품이다."/>
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="무대"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="연극 공연을 하는 장소이다."/>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
