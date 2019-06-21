@@ -4,23 +4,28 @@
     style="@style/Background">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        style="@style/Title"
         android:text="연극의 실제"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="1dp"
         android:gravity="center"
         android:orientation="horizontal">
 
         <Button
-            android:id="@+id/btn_ReadingActivity"
+            android:id="@+id/btn_reading"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="대본 리딩" />
+
+        <Button
+            android:id="@+id/btn_moving"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="무대에서의 동선" />
     </LinearLayout>
 
 </RelativeLayout>
