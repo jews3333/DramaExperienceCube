@@ -115,12 +115,15 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
                         if (items[id] == "재생"){
 
                             player.playAll();
-                        }else if (items[id] == "삭제"){
+
+                        } else if (items[id] == "삭제"){
+
                             player.setDirEmpty("/MyRecords/" + text);
                             //페이지 새로고침
                             Intent intent = new Intent(ReadingActivity.this, ReadingActivity.class);
                             startActivity(intent);
                             finish();
+
                         }
 
                         dialog.dismiss();
