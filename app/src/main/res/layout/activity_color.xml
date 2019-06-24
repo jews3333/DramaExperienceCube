@@ -5,7 +5,8 @@
 
     <TextView
         style="@style/Title"
-        android:text="다양한 감정표현 익히기" />
+        android:text="다양한\n감정표현 익히기"
+        android:layout_marginTop="5dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -17,25 +18,37 @@
             android:id="@+id/btn_Red"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Red" />
+            android:text="Red"
+            android:background="#D13838"
+            android:textColor="#fff"
+            android:textSize="18dp"/>
 
         <Button
             android:id="@+id/btn_Yellow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Yellow" />
+            android:text="Yellow"
+            android:background="#FFEB3B"
+            android:textColor="#412605"
+            android:textSize="18dp"/>
 
         <Button
             android:id="@+id/btn_Blue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Blue" />
+            android:text="Blue"
+            android:background="#00B5DA"
+            android:textColor="#0B173C"
+            android:textSize="18dp"/>
 
         <Button
             android:id="@+id/btn_Gray"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Gray" />
+            android:text="Gray"
+            android:background="#696969"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp"/>
 
     </LinearLayout>
 </RelativeLayout>

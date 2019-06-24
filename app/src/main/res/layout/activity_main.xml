@@ -85,7 +85,8 @@
             android:background="@drawable/main_button1"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:text="연극의 이해" />
+            android:text="연극의 이해"
+            android:fontFamily="@font/jalnan"/>
 
         <Button
             android:id="@+id/btn_subActivity2"
@@ -98,7 +99,8 @@
             android:background="@drawable/main_button2"
             android:textColor="#fff"
             android:textSize="20dp"
-            android:text="연극의 실제" />
+            android:text="연극의 실제"
+            android:fontFamily="@font/jalnan"/>
     </LinearLayout>
 
 
