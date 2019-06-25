@@ -12,6 +12,7 @@ public class SubActivity2 extends AppCompatActivity {
     Button btn_ready;
     Button btn_traning;
     Button btn_reality;
+    Button btn_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -43,6 +44,15 @@ public class SubActivity2 extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(SubActivity2.this, RealityActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btn_back = (Button)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }

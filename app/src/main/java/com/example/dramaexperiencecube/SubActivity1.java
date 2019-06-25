@@ -19,7 +19,7 @@ public class SubActivity1 extends AppCompatActivity {
     private Sub1_Fragment3 sub1_fragment3;
     private Sub1_Fragment4 sub1_fragment4;
 
-    Button btn_sub1_frag1,btn_sub1_frag2,btn_sub1_frag3,btn_sub1_frag4;
+    Button btn_sub1_frag1,btn_sub1_frag2,btn_sub1_frag3,btn_sub1_frag4,btn_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -65,6 +65,17 @@ public class SubActivity1 extends AppCompatActivity {
                 setFrag(3);
             }
         });
+
+
+        btn_back = (Button)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
     }
 
     private void setFrag(int n) {

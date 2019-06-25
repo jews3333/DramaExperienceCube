@@ -13,6 +13,8 @@ public class ColorActivity extends Activity {
     Button Yellow;
     Button Blue;
     Button Gray;
+    Button btn_back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -52,6 +54,15 @@ public class ColorActivity extends Activity {
             public void onClick(View view) {
                 Intent intent = new Intent(ColorActivity.this, com.example.dramaexperiencecube.color.Gray.class);
                 startActivity(intent);
+            }
+        });
+
+        btn_back = (Button)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }

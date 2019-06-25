@@ -10,6 +10,7 @@ import android.widget.Button;
 public class RealityActivity extends AppCompatActivity {
 
     Button btn_sub_btn_ReadingActivity;
+    Button btn_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -23,6 +24,15 @@ public class RealityActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(RealityActivity.this, ReadingActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btn_back = (Button)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }

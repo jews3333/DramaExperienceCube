@@ -8,7 +8,10 @@ import android.view.View;
 import android.widget.Button;
 
 public class ReadyActivity extends AppCompatActivity {
+
     Button btn_Color;
+    Button btn_back;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,6 +25,15 @@ public class ReadyActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Intent intent = new Intent(ReadyActivity.this, ColorActivity.class);
                 startActivity(intent);
+            }
+        });
+
+        btn_back = (Button)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
             }
         });
     }
