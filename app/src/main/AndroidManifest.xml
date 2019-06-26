@@ -70,6 +70,10 @@
             android:name=".color.Gray"
             android:screenOrientation="landscape"
             android:theme="@android:style/Theme.NoTitleBar.Fullscreen"/>
+
+        <activity
+            android:name=".YesoryesActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

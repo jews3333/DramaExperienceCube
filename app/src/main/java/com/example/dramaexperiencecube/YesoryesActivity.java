@@ -1,0 +1,216 @@
+package com.example.dramaexperiencecube;
+
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
+import android.view.MotionEvent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+public class YesoryesActivity extends AppCompatActivity {
+
+
+    Button btn_Level1;
+    Button btn_Level2;
+    Button btn_All_Level;
+    TextView txt_Level1;
+    TextView txt_Level2;
+
+    private boolean _isBtnDown1;
+    private boolean _isBtnDown2;
+    private boolean _isBtnDown3;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_yesoryes);
+
+        final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
+        int r = (int) (Math.random() * 6);
+
+        txt_Level1 = (TextView) findViewById(R.id.txt_Level1);
+        txt_Level2 = (TextView) findViewById(R.id.txt_Level2);
+
+        btn_Level1 = (Button) findViewById(R.id.btn_Level1);
+        btn_Level2 = (Button) findViewById(R.id.btn_Level2);
+        btn_All_Level = (Button) findViewById(R.id.btn_All_Level);
+
+        /*btn_Level1.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int r = (int) (Math.random() * 6);
+
+                if (txt_Level2.getText().equals(str[r])) {
+                    btn_Level1.performClick();
+                } else {
+                    txt_Level1.setText(str[r]);
+                }
+
+            }
+        });*/
+
+        /*
+        btn_Level2.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                int r = (int) (Math.random() * 6);
+
+                if (txt_Level1.getText().equals(str[r])) {
+                    btn_Level2.performClick();
+                } else {
+                    txt_Level2.setText(str[r]);
+                }
+
+            }
+        });*/
+
+
+
+        btn_Level1.setOnTouchListener(onBtnTouchListener1);
+        btn_Level2.setOnTouchListener(onBtnTouchListener2);
+        btn_All_Level.setOnTouchListener(onBtnTouchListener3);
+
+
+    }
+
+    private View.OnTouchListener onBtnTouchListener3 = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    _isBtnDown3 = true;
+                    onBtnDown3();
+                    break;
+                case MotionEvent.ACTION_UP:
+                    _isBtnDown3 = false;
+                    break;
+                default:
+                    break;
+            }
+            return false;
+        }
+    };
+
+
+    private View.OnTouchListener onBtnTouchListener1 = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    _isBtnDown1 = true;
+                    onBtnDown1();
+                    break;
+                case MotionEvent.ACTION_UP:
+                    _isBtnDown1 = false;
+                    break;
+                default:
+                    break;
+            }
+            return false;
+        }
+    };
+
+    private View.OnTouchListener onBtnTouchListener2 = new View.OnTouchListener() {
+        @Override
+        public boolean onTouch(View v, MotionEvent event) {
+            switch (event.getAction()) {
+                case MotionEvent.ACTION_DOWN:
+                    _isBtnDown2 = true;
+                    onBtnDown2();
+                    break;
+                case MotionEvent.ACTION_UP:
+                    _isBtnDown2 = false;
+                    break;
+                default:
+                    break;
+            }
+            return false;
+        }
+    };
+
+    private void onBtnDown1() {
+        TouchThread1 kThread1 = new TouchThread1();
+        kThread1.start();
+    }
+
+    private void onBtnDown2() {
+        TouchThread2 kThread2 = new TouchThread2();
+        kThread2.start();
+    }
+    private void onBtnDown3() {
+        TouchThread3 kThread3 = new TouchThread3();
+        kThread3.start();
+    }
+
+    private class TouchThread1 extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            while (_isBtnDown1) {
+                //touchHandler1.sendEmptyMessage(9876);
+                RejectTxt1();
+                try {
+                    Thread.sleep(200);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private class TouchThread2 extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            while (_isBtnDown2) {
+                //touchHandler2.sendEmptyMessage(9876);
+                RejectTxt2();
+                try {
+                    Thread.sleep(200);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    private class TouchThread3 extends Thread {
+        @Override
+        public void run() {
+            super.run();
+            while (_isBtnDown3) {
+                RejectTxt1();
+                RejectTxt2();
+                try {
+                    Thread.sleep(200);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+    }
+
+    public void RejectTxt1() {
+        final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
+        int r = (int) (Math.random() * 6);
+        if (txt_Level2.getText().equals(str[r])) {
+            RejectTxt1();
+        } else {
+            txt_Level1.setText(str[r]);
+        }
+    }
+
+    public void RejectTxt2() {
+        final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
+        int r = (int) (Math.random() * 6);
+        if (txt_Level1.getText().equals(str[r])) {
+            RejectTxt2();
+        } else {
+            txt_Level2.setText(str[r]);
+        }
+    }
+}
+

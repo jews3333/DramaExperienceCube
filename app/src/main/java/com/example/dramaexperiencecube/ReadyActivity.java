@@ -10,6 +10,7 @@ import android.widget.Button;
 public class ReadyActivity extends AppCompatActivity {
 
     Button btn_Color;
+    Button btn_YesorYes;
     Button btn_back;
 
     @Override
@@ -19,11 +20,20 @@ public class ReadyActivity extends AppCompatActivity {
 
 
         btn_Color = (Button)findViewById(R.id.btn_ColorActivity);
+        btn_YesorYes = (Button)findViewById(R.id.btn_yesoryes);
 
         btn_Color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ReadyActivity.this, ColorActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_YesorYes.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReadyActivity.this, YesoryesActivity.class);
                 startActivity(intent);
             }
         });
