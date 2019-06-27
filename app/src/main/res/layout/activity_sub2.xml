@@ -31,10 +31,11 @@
             android:text="연극의\n실연"/>
     </LinearLayout>
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_back"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
-        android:text="뒤로가기"/>
+        style="@style/BtnBack"/>
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
 
 </RelativeLayout>

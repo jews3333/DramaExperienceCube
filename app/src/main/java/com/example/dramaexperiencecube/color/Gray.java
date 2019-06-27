@@ -1,20 +1,25 @@
 package com.example.dramaexperiencecube.color;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.MediaController;
 import android.widget.Toast;
 import android.widget.VideoView;
 
+import com.example.dramaexperiencecube.ColorActivity;
+import com.example.dramaexperiencecube.MainActivity;
 import com.example.dramaexperiencecube.R;
 
 public class Gray extends Activity {
 
     VideoView videoView;
     Button btnStart, btnStop;
+    ImageButton btn_back, btn_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -37,9 +42,6 @@ public class Gray extends Activity {
 
         videoView.setVideoPath(path);
 
-
-
-
         //동영상이 재생준비가 완료되었을 때를 알 수 있는 리스너 (실제 웹에서 영상을 다운받아 출력할 때 많이 사용됨)
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
             @Override
@@ -56,6 +58,26 @@ public class Gray extends Activity {
                 //동영상 재생이 완료된 후 호출되는 메소드
                 Toast.makeText(Gray.this,
                         "동영상 재생이 완료되었습니다.", Toast.LENGTH_SHORT).show();
+            }
+        });
+
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(Gray.this, MainActivity.class);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
 

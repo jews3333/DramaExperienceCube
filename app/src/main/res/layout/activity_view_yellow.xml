@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/Background">
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -13,26 +12,33 @@
 
         <VideoView
             android:id="@+id/view"
-            android:layout_width="match_parent"
-            android:layout_height="309dp"
-            android:layout_gravity="center" />
+            style="@style/Video" />
 
-        <Button
-            android:id="@+id/btnStart"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="시작"
-            android:onClick="StartButton"/>
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btnStart"
+                style="@style/BtnStart"
+                android:onClick="StartButton"
+                android:text="시작" />
 
-        <Button
-            android:id="@+id/btnStop"
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:text="정지"
-            android:onClick="StopButton"/>
+            <Button
+                android:id="@+id/btnStop"
+                style="@style/BtnStop"
+                android:onClick="StopButton"
+                android:text="정지" />
+        </LinearLayout>
 
     </LinearLayout>
 
-
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
 
 </RelativeLayout>

@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 import com.example.dramaexperiencecube.color.Red;
 
@@ -13,7 +14,7 @@ public class ColorActivity extends Activity {
     Button Yellow;
     Button Blue;
     Button Gray;
-    Button btn_back;
+    ImageButton btn_back, btn_home;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
@@ -57,12 +58,23 @@ public class ColorActivity extends Activity {
             }
         });
 
-        btn_back = (Button)findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 onBackPressed();
+            }
+        });
+
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ColorActivity.this, MainActivity.class);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
             }
         });
     }

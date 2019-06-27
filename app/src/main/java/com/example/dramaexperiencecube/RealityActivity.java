@@ -6,11 +6,12 @@ import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class RealityActivity extends AppCompatActivity {
 
     Button btn_sub_btn_ReadingActivity;
-    Button btn_back;
+    ImageButton btn_back;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,7 +28,7 @@ public class RealityActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = (Button)findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
