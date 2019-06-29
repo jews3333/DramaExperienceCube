@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -30,6 +31,7 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
     Button prepareBtn;
     Button recordBtn;
     Button stopBtn;
+    ImageButton btn_back, btn_home;
 
     boolean isRecording = false;
 
@@ -57,6 +59,26 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
         prepareBtn.setOnClickListener(this);
         recordBtn.setOnClickListener(this);
         stopBtn.setOnClickListener(this);
+
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReadingActivity.this, MainActivity.class);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
     }
 
     @Override

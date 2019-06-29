@@ -12,27 +12,26 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginTop="20dp">
+        android:gravity="center">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="5dp">
             <Button
                 android:id="@+id/btn_Red"
+                android:background="@drawable/button_red"
                 style="@style/BtnSize"
                 android:text="Red"
-                android:background="#D13838"
                 android:textColor="#fff"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginRight="5dp"/>
 
             <Button
                 android:id="@+id/btn_Yellow"
+                android:background="@drawable/button_yellow"
                 style="@style/BtnSize"
                 android:text="Yellow"
-                android:background="#FFEB3B"
                 android:textColor="#412605"/>
         </LinearLayout>
         <LinearLayout
@@ -42,21 +41,25 @@
             android:gravity="center">
             <Button
                 android:id="@+id/btn_Blue"
+                android:background="@drawable/button_blue"
                 style="@style/BtnSize"
                 android:text="Blue"
-                android:background="#00B5DA"
                 android:textColor="#0B173C"
-                android:layout_marginRight="20dp"/>
+                android:layout_marginRight="5dp"/>
 
             <Button
                 android:id="@+id/btn_Gray"
+                android:background="@drawable/button_gray"
                 style="@style/BtnSize"
                 android:text="Gray"
-                android:background="#696969"
                 android:textColor="#FFFFFF"/>
         </LinearLayout>
 
     </LinearLayout>
+
+    <TextView
+        style="@style/Tip"
+        android:text="조명의 색상에 따른 감정변화를 체험해보세요!"/>
 
     <ImageButton
         android:id="@+id/btn_back"

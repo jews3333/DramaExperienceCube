@@ -17,19 +17,27 @@
 
         <Button
             android:id="@+id/btn_ReadingActivity"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="대본 리딩" />
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/btn_reading"/>
 
         <Button
             android:id="@+id/btn_moving"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="무대에서의 동선" />
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:background="@drawable/btn_moving"/>
     </LinearLayout>
+
+    <TextView
+        style="@style/Tip"
+        android:text="연습한 연극을 실제처럼 경험해보세요!"/>
 
     <ImageButton
         android:id="@+id/btn_back"
         style="@style/BtnBack"/>
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
 
 </RelativeLayout>

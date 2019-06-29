@@ -14,19 +14,28 @@
         android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="내가 만들어가는 극본"/>
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:background="@drawable/btn_scenario"
+            android:layout_marginRight="20dp"/>
 
         <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="상황과 분위기에 맞는 효과음과 조명"/>
+            android:layout_width="200dp"
+            android:layout_height="120dp"
+            android:background="@drawable/btn_conditions"/>
 
     </LinearLayout>
+
+    <TextView
+        style="@style/Tip"
+        android:text="이제 재미있는 연극을 연습해보세요!"/>
 
     <ImageButton
         android:id="@+id/btn_back"
         style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
 
 </RelativeLayout>
