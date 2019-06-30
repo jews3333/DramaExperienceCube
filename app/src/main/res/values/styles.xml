@@ -25,6 +25,12 @@
         <item name="android:background">@drawable/bg_full2</item>
     </style>
 
+    <style name="Background3">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/bg_black</item>
+    </style>
+
     <style name="Container" parent="@android:style/Widget">
         <item name="android:layout_marginTop">100dp</item>
         <item name="android:layout_marginBottom">120dp</item>

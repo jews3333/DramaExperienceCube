@@ -194,7 +194,7 @@ public class YesoryesActivity extends AppCompatActivity {
     }
 
     public void RejectTxt1() {
-        final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
+        final String[] str = {"웃거나", "울거나", "걷거나", "절하거나", "기거나", "랩하거나"};
         int r = (int) (Math.random() * 6);
         if (txt_Level2.getText().equals(str[r])) {
             RejectTxt1();
@@ -204,7 +204,7 @@ public class YesoryesActivity extends AppCompatActivity {
     }
 
     public void RejectTxt2() {
-        final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
+        final String[] str = {"웃는", "우는", "걷는", "절하는", "기는", "랩하는"};
         int r = (int) (Math.random() * 6);
         if (txt_Level1.getText().equals(str[r])) {
             RejectTxt2();
