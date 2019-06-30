@@ -1,60 +1,88 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <Button
-        android:id="@+id/btn_Level1"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="1수준"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btn_Level2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="2수준"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
-
-    <Button
-        android:id="@+id/btn_All_Level"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="전체"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_Level2"
-        app:layout_constraintStart_toEndOf="@+id/btn_Level1" />
+    style="@style/Background">
 
     <TextView
-        android:id="@+id/txt_Level1"
-        android:layout_width="116dp"
-        android:layout_height="68dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="16dp"
-        android:text="1수준 낱말"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:id="@+id/textView"
+        style="@style/Title"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Yes or Yes\n즉흥극"/>
 
-    <TextView
-        android:id="@+id/txt_Level2"
-        android:layout_width="116dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="8dp"
-        android:text="2수준 낱말"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-</android.support.constraint.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_centerVertical="true">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:textSize="32dp"
+            android:layout_marginBottom="5dp"
+            android:text="당신이 "/>
+
+        <TextView
+            android:id="@+id/txt_Level1"
+            android:layout_width="115dp"
+            android:layout_height="44dp"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="#80ffffff"
+            android:layout_marginBottom="5dp"
+            android:textColor="#009e96"
+            android:text="1수준"/>
+
+        <TextView
+            android:id="@+id/txt_Level2"
+            android:layout_width="115dp"
+            android:layout_height="44dp"
+            android:textSize="32dp"
+            android:textStyle="bold"
+            android:textAlignment="center"
+            android:background="#80ffffff"
+            android:layout_marginBottom="5dp"
+            android:textColor="#ae5da1"
+            android:text="2수준"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="44dp"
+            android:textSize="32dp"
+            android:text="그 사람인가요?"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_Level1"
+            style="@style/BtnStart"
+            android:text="1수준"/>
+
+        <Button
+            android:id="@+id/btn_All_Level"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="전체"/>
+
+        <Button
+            android:id="@+id/btn_Level2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2수준" />
+
+    </LinearLayout>
+
+
+</RelativeLayout>
