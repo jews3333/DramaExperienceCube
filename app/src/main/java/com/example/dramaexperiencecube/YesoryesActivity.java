@@ -10,6 +10,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.Arrays;
+
 public class YesoryesActivity extends AppCompatActivity {
 
 
@@ -196,7 +198,8 @@ public class YesoryesActivity extends AppCompatActivity {
     public void RejectTxt1() {
         final String[] str = {"웃거나", "울거나", "걷거나", "절하거나", "기거나", "랩하거나"};
         int r = (int) (Math.random() * 6);
-        if (txt_Level2.getText().equals(str[r])) {
+
+        if (Reject(1, (String)txt_Level2.getText(), r)) {
             RejectTxt1();
         } else {
             txt_Level1.setText(str[r]);
@@ -206,11 +209,33 @@ public class YesoryesActivity extends AppCompatActivity {
     public void RejectTxt2() {
         final String[] str = {"웃는", "우는", "걷는", "절하는", "기는", "랩하는"};
         int r = (int) (Math.random() * 6);
-        if (txt_Level1.getText().equals(str[r])) {
+
+        if (Reject(2, (String)txt_Level1.getText(), r)) {
             RejectTxt2();
         } else {
             txt_Level2.setText(str[r]);
         }
+    }
+
+    public boolean Reject(int num, String txt, int r) {
+        final String[] str1 = {"웃거나", "울거나", "걷거나", "절하거나", "기거나", "랩하거나"};
+        final String[] str2 = {"웃는", "우는", "걷는", "절하는", "기는", "랩하는"};
+        boolean result = false;
+
+            if(num == 1){
+                    if(txt.equals(str2[r])){
+                        return true;
+                    }else {
+                        return false;
+                    }
+            }else if(num == 2) {
+                    if(txt.equals(str1[r])){
+                        return true;
+                    }else {
+                        return false;
+                    }
+            }
+        return true;
     }
 }
 

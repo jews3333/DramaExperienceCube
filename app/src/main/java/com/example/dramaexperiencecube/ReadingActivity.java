@@ -12,8 +12,8 @@ import android.support.v7.widget.RecyclerView;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.LinearLayout;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.dramaexperiencecube.record.InputAlert;
 import com.example.dramaexperiencecube.record.MyAdapter;
@@ -39,6 +39,35 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reading);
+
+
+            final LinearLayout layout_make = (LinearLayout)findViewById(R.id.layout_make);
+            final TextView txt_where = (TextView)findViewById(R.id.txt_where);
+            final TextView txt_time = (TextView)findViewById(R.id.txt_time);
+            final TextView txt_location = (TextView)findViewById(R.id.txt_location);
+            final TextView txt_human = (TextView)findViewById(R.id.txt_human);
+            final TextView txt_make = (TextView)findViewById(R.id.txt_make);
+            Intent intent = getIntent();
+            String[] MyPlanstr;
+
+        try {
+            MyPlanstr = intent.getStringArrayExtra("MyPlanstr");
+                layout_make.setVisibility(View.VISIBLE);
+                txt_where.setVisibility(View.VISIBLE);
+                txt_time.setVisibility(View.VISIBLE);
+                txt_location.setVisibility(View.VISIBLE);
+                txt_human.setVisibility(View.VISIBLE);
+                txt_make.setVisibility(View.VISIBLE);
+                txt_where.setText(MyPlanstr[0]);
+                txt_time.setText(MyPlanstr[1]);
+                txt_location.setText(MyPlanstr[2]);
+                txt_human.setText(MyPlanstr[3]);
+                txt_make.setText(MyPlanstr[4]);
+        }catch (Exception e){
+            System.out.println("error : "  + e);
+        }
+
+
 
         recorder = new Recorder(this, "/MyRecords");
 

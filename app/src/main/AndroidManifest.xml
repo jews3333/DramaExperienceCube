@@ -74,6 +74,10 @@
         <activity
             android:name=".YesoryesActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".MyPlanActivity"
+            android:screenOrientation="landscape"/>
     </application>
 
 </manifest>

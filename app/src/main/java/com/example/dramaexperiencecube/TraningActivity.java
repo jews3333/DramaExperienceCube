@@ -11,6 +11,7 @@ import android.widget.ImageButton;
 public class TraningActivity extends AppCompatActivity {
 
     ImageButton btn_back, btn_home;
+    Button btn_MyPlan;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -28,11 +29,22 @@ public class TraningActivity extends AppCompatActivity {
 
         btn_home = (ImageButton)findViewById(R.id.btn_home);
 
+        btn_MyPlan = (Button)findViewById(R.id.btn_MyPlan);
+
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TraningActivity.this, MainActivity.class);
                 intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
+
+
+        btn_MyPlan.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(TraningActivity.this, MyPlanActivity.class);
                 startActivity(intent);
             }
         });
