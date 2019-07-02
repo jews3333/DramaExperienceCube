@@ -1,5 +1,6 @@
 package com.example.dramaexperiencecube;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.Message;
@@ -8,6 +9,7 @@ import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import java.util.Arrays;
@@ -20,6 +22,8 @@ public class YesoryesActivity extends AppCompatActivity {
     Button btn_All_Level;
     TextView txt_Level1;
     TextView txt_Level2;
+
+    ImageButton btn_back,btn_home;
 
     private boolean _isBtnDown1;
     private boolean _isBtnDown2;
@@ -74,6 +78,26 @@ public class YesoryesActivity extends AppCompatActivity {
         btn_Level1.setOnTouchListener(onBtnTouchListener1);
         btn_Level2.setOnTouchListener(onBtnTouchListener2);
         btn_All_Level.setOnTouchListener(onBtnTouchListener3);
+
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(YesoryesActivity.this, MainActivity.class);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
 
     }

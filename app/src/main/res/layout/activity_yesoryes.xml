@@ -85,8 +85,8 @@
             android:textColor="#fff"
             android:textSize="20sp"
             android:textStyle="bold"
-            android:layout_marginLeft="10dp"
-            android:layout_marginRight="10dp"
+            android:layout_marginLeft="150dp"
+            android:layout_marginRight="150dp"
             android:text="전체"/>
 
         <Button
@@ -99,6 +99,14 @@
             android:text="2수준" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
 
 
 </RelativeLayout>

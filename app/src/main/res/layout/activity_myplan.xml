@@ -1,333 +1,338 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    style="@style/Background">
+
+    <TextView
+        style="@style/Title"
+        android:text="내가 만들어가는\n극본"
+        android:layout_marginTop="10dp"/>
+
 
     <EditText
         android:id="@+id/edit_txt"
         android:layout_width="256dp"
         android:layout_height="53dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginBottom="8dp"
-        android:text="직접입력"
+        android:text="직접 입력"
         android:visibility="visible"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        android:layout_marginBottom="105dp"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginLeft="160dp"
+        android:layout_marginRight="160dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <!--연출상황-->
+            <LinearLayout
+                android:id="@+id/layout_where"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="visible">
+
+                <Button
+                    android:id="@+id/btn_where1"
+                    style="@style/planListBtn"
+                    android:text="현장체험학습 날, 갑자기 배가 아픈 상황"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_where3"
+                    style="@style/planListBtn"
+                    android:text="내가 좋아하는 이성친구를 친한친구도 좋아하는 상황"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_where2"
+                    style="@style/planListBtn"
+                    android:text="학예회를 준비하는 데 하고싶은 역할이 겹치는 상황"
+                    android:visibility="visible" />
+
+            </LinearLayout>
+
+            <!--언제-->
+            <LinearLayout
+                android:id="@+id/layout_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_time1"
+                    style="@style/planListBtn"
+                    android:text="점심시간"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_time2"
+                    style="@style/planListBtn"
+                    android:text="학교로 돌아올 때"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_time3"
+                    style="@style/planListBtn"
+                    android:text="방과후"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_time4"
+                    style="@style/planListBtn"
+                    android:text="쉬는 시간(점심시간)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_time5"
+                    style="@style/planListBtn"
+                    android:text="아침활동 시간"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+
+            <!--어디서-->
+            <LinearLayout
+                android:id="@+id/layout_location"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_location1"
+                    style="@style/planListBtn"
+                    android:text="학교"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location2"
+                    style="@style/planListBtn"
+                    android:text="현장체험학습 장소"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location3"
+                    style="@style/planListBtn"
+                    android:text="버스 안"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location4"
+                    style="@style/planListBtn"
+                    android:text="교실"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location5"
+                    style="@style/planListBtn"
+                    android:text="집"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location6"
+                    style="@style/planListBtn"
+                    android:text="운동장"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location7"
+                    style="@style/planListBtn"
+                    android:text="PC방"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location8"
+                    style="@style/planListBtn"
+                    android:text="도서관"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_location9"
+                    style="@style/planListBtn"
+                    android:text="창원 시내"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!--누가-->
+            <LinearLayout
+                android:id="@+id/layout_human"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <Button
+                    android:id="@+id/btn_human1"
+                    style="@style/planListBtn"
+                    android:text="해인(남학생)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human2"
+                    style="@style/planListBtn"
+                    android:text="지민(여학생)"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human3"
+                    style="@style/planListBtn"
+                    android:text="선생님"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human4"
+                    style="@style/planListBtn"
+                    android:text="아빠"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human5"
+                    style="@style/planListBtn"
+                    android:text="엄마"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human6"
+                    style="@style/planListBtn"
+                    android:text="호랑이"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human7"
+                    style="@style/planListBtn"
+                    android:text="사자"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human8"
+                    style="@style/planListBtn"
+                    android:text="로봇"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human9"
+                    style="@style/planListBtn"
+                    android:text="할아버지"
+                    android:visibility="gone" />
+
+                <Button
+                    android:id="@+id/btn_human10"
+                    style="@style/planListBtn"
+                    android:text="요정"
+                    android:visibility="gone" />
+
+            </LinearLayout>
+
+            <!--나몰라-->
+            <LinearLayout
+                android:id="@+id/layout_make"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+
+                <TextView
+                    android:id="@+id/txt_where"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="장면"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="때"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_location"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="장소"
+                    android:visibility="gone" />
+
+                <TextView
+                    android:id="@+id/txt_human"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:layout_marginBottom="3dp"
+                    android:text="인물"
+                    android:visibility="gone" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+
+    </ScrollView>
+
 
     <LinearLayout
-        android:id="@+id/layout_where"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="visible">
+        android:layout_height="50dp"
+        android:orientation="horizontal"
+        android:layout_marginBottom="35dp"
+        android:gravity="center"
+        android:layout_alignParentBottom="true">
 
-        <Button
-            android:id="@+id/btn_where1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="현장체험학습 날, 갑자기 배가 아픈 상황"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/btn_where3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="내가 좋아하는 이성친구를 친한친구도 좋아하는 상황"
-            android:visibility="visible" />
-
-        <Button
-            android:id="@+id/btn_where2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="학예회를 준비하는 데 하고싶은 역할이 겹치는 상황"
-            android:visibility="visible" />
-
+        <!--연출상황 입력-->
         <Button
             android:id="@+id/btn_where"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BtnStart"
             android:text="입력"
             android:visibility="visible" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_time"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/btn_time1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="점심시간"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_time2"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="학교로 돌아올 때"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_time3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="방과후"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_time4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="쉬는 시간(점심시간)"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_time5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="아침활동 시간"
-            android:visibility="gone" />
-
+        <!--언제 입력-->
         <Button
             android:id="@+id/btn_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BtnStart"
             android:text="입력"
             android:visibility="gone" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_location"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/btn_location1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="학교"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="현장체험학습 장소"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="버스 안"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="교실"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="집"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="운동장"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="PC방"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="도서관"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_location9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="창원 시내"
-            android:visibility="gone" />
-
+        <!--어디서 입력-->
         <Button
             android:id="@+id/btn_location"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
+            style="@style/BtnStart"
             android:text="입력"
             android:visibility="gone" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_human"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="horizontal"
-        android:visibility="gone">
-
-        <Button
-            android:id="@+id/btn_human1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="해인(남학생)"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="지민(여학생)"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="선생님"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="아빠"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human5"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="엄마"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human6"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="호랑이"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human7"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="사자"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human8"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="로봇"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human9"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="할아버지"
-            android:visibility="gone" />
-
-        <Button
-            android:id="@+id/btn_human10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="요정"
-            android:visibility="gone" />
-
+        <!--나몰라 입력-->
         <Button
             android:id="@+id/btn_human"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            style="@style/BtnStart"
             android:text="입력"
             android:visibility="gone" />
-    </LinearLayout>
 
-    <LinearLayout
-        android:id="@+id/layout_make"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:id="@+id/txt_where"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="장면"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="때"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="장소"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_human"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="인물"
-            android:visibility="gone" />
-
+        <!--다 작성했으면 대본리딩-->
         <Button
             android:id="@+id/btn_reading"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            style="@style/BtnStop"
             android:text="대본리딩"
             android:visibility="gone" />
-
     </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+
+</RelativeLayout>
