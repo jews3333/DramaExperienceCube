@@ -78,6 +78,11 @@
         <activity
             android:name=".MyPlanActivity"
             android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".MovingActivity"
+            android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

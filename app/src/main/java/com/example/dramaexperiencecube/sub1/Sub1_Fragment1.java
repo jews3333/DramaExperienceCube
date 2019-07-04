@@ -1,4 +1,4 @@
-package com.example.dramaexperiencecube;
+package com.example.dramaexperiencecube.sub1;
 
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -8,15 +8,17 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-public class Sub1_Fragment2 extends Fragment {
+import com.example.dramaexperiencecube.R;
 
-    public Sub1_Fragment2() {
+public class Sub1_Fragment1 extends Fragment {
+
+    public Sub1_Fragment1() {
 
     }
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        return inflater.inflate(R.layout.sub1_fragment2, container, false);
+        return inflater.inflate(R.layout.sub1_fragment1, container, false);
     }
 }

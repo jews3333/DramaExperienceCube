@@ -10,7 +10,7 @@ import android.widget.ImageButton;
 
 public class RealityActivity extends AppCompatActivity {
 
-    Button btn_sub_btn_ReadingActivity;
+    Button btn_sub_btn_ReadingActivity, btn_moving;
     ImageButton btn_back,btn_home;
 
     @Override
@@ -24,6 +24,16 @@ public class RealityActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RealityActivity.this, ReadingActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        btn_moving = (Button)findViewById(R.id.btn_moving);
+
+        btn_moving.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(RealityActivity.this, MovingActivity.class);
                 startActivity(intent);
             }
         });

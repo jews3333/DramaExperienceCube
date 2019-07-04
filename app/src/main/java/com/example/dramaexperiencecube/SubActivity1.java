@@ -1,17 +1,19 @@
 package com.example.dramaexperiencecube;
 
 import android.content.Intent;
-import android.media.Image;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
-import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
-import android.widget.Switch;
+
+import com.example.dramaexperiencecube.sub1.Sub1_Fragment1;
+import com.example.dramaexperiencecube.sub1.Sub1_Fragment2;
+import com.example.dramaexperiencecube.sub1.Sub1_Fragment3;
+import com.example.dramaexperiencecube.sub1.Sub1_Fragment4;
 
 public class SubActivity1 extends AppCompatActivity {
 
