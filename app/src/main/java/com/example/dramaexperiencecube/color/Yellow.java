@@ -3,29 +3,63 @@ package com.example.dramaexperiencecube.color;
 import android.app.Activity;
 import android.content.Intent;
 import android.media.MediaPlayer;
+import android.net.Uri;
 import android.os.Bundle;
-import android.os.Environment;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.MediaController;
+import android.widget.ScrollView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.VideoView;
 
-import com.example.dramaexperiencecube.ColorActivity;
 import com.example.dramaexperiencecube.MainActivity;
 import com.example.dramaexperiencecube.R;
 
 public class Yellow extends Activity {
 
-    VideoView videoView;
-    Button btnStart, btnStop;
+    private static VideoView videoView;
+    static String pkgNm;
+    static MediaController controller;
+    View_Yellow view_Yellow;
+    Button btnStart, btnStop, btn_list;
     ImageButton btn_back, btn_home;
+    ScrollView scrollView;
+    RecyclerView mRecyclerView;
+    RecyclerView.LayoutManager mLayoutManager;
+    Adapter_Yellow yellowAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_yellow);
+        pkgNm = getPackageName();
+        view_Yellow = new View_Yellow(this, getPackageName());
+
+        //뷰 리스트 추가
+        btn_list = (Button)findViewById(R.id.btn_list);
+        mRecyclerView = findViewById(R.id.recycler_view);
+        mRecyclerView.setHasFixedSize(true);
+        mLayoutManager = new LinearLayoutManager(this);
+        mRecyclerView.setLayoutManager(mLayoutManager);
+        yellowAdapter = new Adapter_Yellow(view_Yellow.getViewList());
+        mRecyclerView.setAdapter(yellowAdapter);
+
+
+        btn_list.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                mRecyclerView.setVisibility(mRecyclerView.getVisibility() == View.VISIBLE ? View.GONE : View.VISIBLE);
+            }
+        });
+
+
+
+
 
         //레이아웃 위젯 findViewById
         videoView = (VideoView) findViewById(R.id.view);
@@ -33,15 +67,18 @@ public class Yellow extends Activity {
         btnStop = (Button) findViewById(R.id.btnStop);
 
         //미디어컨트롤러 추가하는 부분
-        MediaController controller = new MediaController(Yellow.this);
+        controller = new MediaController(Yellow.this);
         videoView.setMediaController(controller);
 
         //비디오뷰 포커스를 요청함
         videoView.requestFocus();
 
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.yellow;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.yellow_1_happy_student;
 
         videoView.setVideoPath(path);
+
+
+
 
         //동영상이 재생준비가 완료되었을 때를 알 수 있는 리스너 (실제 웹에서 영상을 다운받아 출력할 때 많이 사용됨)
         videoView.setOnPreparedListener(new MediaPlayer.OnPreparedListener() {
@@ -105,12 +142,22 @@ public class Yellow extends Activity {
         //비디오 재생 잠시 멈춤
         videoView.pause();
         //비디오 재생 완전 멈춤
-//        videoView.stopPlayback();
+        //        videoView.stopPlayback();
         //videoView를 null로 반환 시 동영상의 반복 재생이 불가능
-//        videoView = null;
+        //        videoView = null;
+    }
+
+    public static void View_video(TextView str){
+        //미디어컨트롤러 추가하는 부분
+        videoView.setMediaController(controller);
+
+        //비디오뷰 포커스를 요청함
+        videoView.requestFocus();
+        //uri 획득
+        Uri.parse("android.resource://"+pkgNm+"/raw/"+str.getText().toString());
+        videoView.setVideoURI(Uri.parse("android.resource://"+pkgNm+"/raw/"+str.getText().toString()));
+//        videoView.setVideoPath(path);
     }
 
 
-
 }
-
