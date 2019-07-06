@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="감정, 배경"/>
+
+    <ScrollView
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_bak"
+                    android:text="bak"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_cry1"
+                    android:text="cry1"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_cry2"
+                    android:text="cry2"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_gong"
+                    android:text="gong"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_smile"
+                    android:text="smile"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_sin"
+                    android:text="sin"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_zl1"
+                    android:text="zl1"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_zl2"
+                    android:text="zl2"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_mu1"
+                    android:text="mu1"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_mu2"
+                    android:text="mu2"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_sinbi"
+                    android:text="sinbi"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -26,8 +26,8 @@ public class Yellow extends Activity {
     static String pkgNm;
     static MediaController controller;
     View_Yellow view_Yellow;
-    Button btnStart, btnStop, btn_list;
-    ImageButton btn_back, btn_home;
+    Button btnStart, btnStop;
+    ImageButton btn_back, btn_home, btn_list;
     ScrollView scrollView;
     RecyclerView mRecyclerView;
     RecyclerView.LayoutManager mLayoutManager;
@@ -41,7 +41,7 @@ public class Yellow extends Activity {
         view_Yellow = new View_Yellow(this, getPackageName());
 
         //뷰 리스트 추가
-        btn_list = (Button)findViewById(R.id.btn_list);
+        btn_list = (ImageButton) findViewById(R.id.btn_list);
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);

@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="동물, 스포츠"/>
+
+    <ScrollView
+        android:layout_width="500dp"
+        android:layout_height="200dp"
+        android:padding="10dp"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_baseball"
+                    android:text="baseball"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_basket"
+                    android:text="basket"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_bear"
+                    android:text="bear"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_bird"
+                    android:text="bird"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_bolling"
+                    android:text="bolling"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_boxing"
+                    android:text="boxing"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_elaphant"
+                    android:text="elaphant"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_golf"
+                    android:text="golf"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_hakey"
+                    android:text="hakey"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_horse"
+                    android:text="horse"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_lion"
+                    android:text="lion"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_monkey"
+                    android:text="monkey"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_motor"
+                    android:text="motor"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_tiger"
+                    android:text="tiger"/>
+
+                <Button
+                    style="@style/soundList"
+                    android:onClick="onSound"
+                    android:background="@drawable/btn_wolf"
+                    android:text="wolf"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

@@ -21,37 +21,24 @@
 
             <Button
                 android:id="@+id/btn_ColorActivity"
-                android:layout_width="200dp"
+                android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginRight="20dp"
                 android:background="@drawable/btn_ready_001"/>
 
             <Button
-                android:id="@+id/btn_animation"
-                android:layout_width="200dp"
-                android:layout_height="120dp"
-                android:background="@drawable/btn_ready_002"/>
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center"
-            android:layout_marginTop="10dp">
-
-            <Button
                 android:id="@+id/btn_yesoryes"
-                android:layout_width="200dp"
+                android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_marginRight="20dp"
-                android:background="@drawable/btn_ready_003"/>
+                android:background="@drawable/btn_ready_002"/>
 
             <Button
                 android:id="@+id/btn_game"
-                android:layout_width="200dp"
+                android:layout_width="120dp"
                 android:layout_height="120dp"
-                android:background="@drawable/btn_ready_004"/>
+                android:layout_marginRight="20dp"
+                android:background="@drawable/btn_ready_003"/>
         </LinearLayout>
 
     </LinearLayout>

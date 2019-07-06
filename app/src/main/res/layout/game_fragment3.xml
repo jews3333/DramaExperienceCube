@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="게임준비"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="게임 구성"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="각양각색 카드46장, 히든카드 12장, 결말카드 14장, 이야기판, 게임설명서"/>
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="게임 준비"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="플레이어는 각자 각양각색카드 5장, 히든카드 2장, 결말카드 1장을 나눠 가진다. "/>
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

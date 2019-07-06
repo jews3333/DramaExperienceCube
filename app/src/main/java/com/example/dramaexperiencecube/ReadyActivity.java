@@ -10,8 +10,7 @@ import android.widget.ImageButton;
 
 public class ReadyActivity extends AppCompatActivity {
 
-    Button btn_Color;
-    Button btn_YesorYes;
+    Button btn_Color, btn_YesorYes, btn_game;
     ImageButton btn_back, btn_home;
 
     @Override
@@ -21,8 +20,6 @@ public class ReadyActivity extends AppCompatActivity {
 
 
         btn_Color = (Button)findViewById(R.id.btn_ColorActivity);
-        btn_YesorYes = (Button)findViewById(R.id.btn_yesoryes);
-
         btn_Color.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -31,6 +28,7 @@ public class ReadyActivity extends AppCompatActivity {
             }
         });
 
+        btn_YesorYes = (Button)findViewById(R.id.btn_yesoryes);
         btn_YesorYes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -39,8 +37,16 @@ public class ReadyActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_game = (Button)findViewById(R.id.btn_game);
+        btn_game.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(ReadyActivity.this, GameActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -49,7 +55,6 @@ public class ReadyActivity extends AppCompatActivity {
         });
 
         btn_home = (ImageButton)findViewById(R.id.btn_home);
-
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

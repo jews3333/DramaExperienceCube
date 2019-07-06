@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="카드소개"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="각양각색카드(46장)"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="다양한 상황의 그림(5,6학년 교과서 속 그림)과 대사가 적힌 카드 "/>
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="히든카드(12장)"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="연극기법(핫시팅, 타블로), 게임적 요소(순서건너뛰기, 벌칙카드, 카드교환 등)가 포함된 카드"/>
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="결말카드"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="게임의 목표로 도달하기 위한 카드, 각기 다른 다양한 결말이 적혀 있는 카드"/>
+
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

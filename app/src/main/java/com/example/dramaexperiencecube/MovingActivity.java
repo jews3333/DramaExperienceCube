@@ -8,6 +8,7 @@ import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.Path;
+import android.graphics.PorterDuff;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
@@ -23,11 +24,12 @@ import java.util.List;
 public class MovingActivity extends AppCompatActivity {
 
     ImageButton btn_back,btn_home;
-    Button btn_red, btn_blue, btn_green, btn_yellow;
-    MyView m;
+    Button btn_black,btn_red, btn_blue, btn_green, btn_yellow, btn_clear;
 
     private int color = Color.BLACK;
     private float r = 10f;
+
+    List<MyView.PathInfo> data;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -37,11 +39,20 @@ public class MovingActivity extends AppCompatActivity {
 
         //drawing 레이아웃에 뷰 상속
         LinearLayout ll = (LinearLayout)findViewById(R.id.drawing);
-        m = new MyView(ll.getContext());
+        final MyView m = new MyView(ll.getContext());
 
         m.setPaintInfo(color, r);
 
         ll.addView(m);
+
+        btn_black = (Button)findViewById(R.id.btn_black);
+        btn_black.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                color = Color.BLACK;
+                m.setPaintInfo(color, r);
+            }
+        });
 
         btn_red = (Button)findViewById(R.id.btn_red);
         btn_red.setOnClickListener(new View.OnClickListener() {
@@ -79,6 +90,16 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
+        btn_clear = (Button)findViewById(R.id.btn_clear);
+        btn_clear.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                color = Color.BLACK;
+                m.setPaintInfo(color, r);
+                data.clear();
+                m.invalidate();
+            }
+        });
 
         btn_back = (ImageButton)findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
@@ -98,95 +119,100 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
     }
-}
 
-class MyView extends View {
-    private Paint paint;
-    private List<PathInfo> data;
-   // Path path = new Path();
-
-    private PathInfo pathInfo;
-
-    public void setPaintInfo(int color, float r){
-        paint = new Paint();
-        paint.setColor(color);
-
-        paint.setStyle(Paint.Style.STROKE);
-
-        paint.setStrokeWidth(r);
-
-        pathInfo = new PathInfo();
-        pathInfo.setPaint(paint);
-    }
-
-    public MyView(Context context) {
-        super(context);
-
-        paint = new Paint();
-
-        paint.setStyle(Paint.Style.STROKE); // 선이 그려지도록
-        paint.setColor(Color.RED);
-        paint.setStrokeWidth(10f); // 선의 굵기 지정
-
-        data = new ArrayList<>();
-    }
-
-    @Override
-    protected void onDraw(Canvas canvas) { // 화면을 그려주는 메서드
-
-        int width = canvas.getWidth();
-        int height = canvas.getHeight();
-
-        Bitmap grid = BitmapFactory.decodeResource(getResources(),R.drawable.grid);
-        Bitmap resize_grid = Bitmap.createScaledBitmap(grid, width-40, height-40, true);
-
-        canvas.drawBitmap(resize_grid,10,10,paint);
-        canvas.drawARGB(80,255,255,255);
-        //canvas.drawPath(path, paint); // 저장된 path 를 그려라
-
-        for (PathInfo p : data){
-            canvas.drawPath(p, p.getPaint());
-        }
-
-        super.onDraw(canvas);
-    }
-    @Override
-    public boolean onTouchEvent(MotionEvent event) {
-
-
-        switch(event.getAction()) {
-            case MotionEvent.ACTION_DOWN :
-                pathInfo.moveTo(event.getX(), event.getY()); // 자취에 그리지 말고 위치만 이동해라
-                break;
-            case MotionEvent.ACTION_MOVE :
-                pathInfo.lineTo(event.getX(), event.getY()); // 자취에 선을 그려라
-                break;
-            case MotionEvent.ACTION_UP :
-                break;
-        }
-
-        data.add(pathInfo);
-
-        invalidate(); // 화면을 다시그려라
-
-        return true;
-    }
-
-    class PathInfo extends Path {
+    class MyView extends View {
         private Paint paint;
+        //protected List<PathInfo> data;
+        // Path path = new Path();
 
-        PathInfo(){
+        private PathInfo pathInfo;
+
+        public void setPaintInfo(int color, float r){
             paint = new Paint();
+            paint.setColor(color);
+
+            paint.setStyle(Paint.Style.STROKE);
+
+            paint.setStrokeWidth(r);
+
+            pathInfo = new PathInfo();
+            pathInfo.setPaint(paint);
         }
 
-        public Paint getPaint(){
-            return paint;
+        public MyView(Context context) {
+            super(context);
+
+            paint = new Paint();
+
+            paint.setStyle(Paint.Style.STROKE); // 선이 그려지도록
+            paint.setColor(Color.RED);
+            paint.setStrokeWidth(10f); // 선의 굵기 지정
+
+            data = new ArrayList<>();
         }
 
-        public void setPaint(Paint paint){
-            this.paint = paint;
+        @Override
+        protected void onDraw(Canvas canvas) { // 화면을 그려주는 메서드
+
+            int width = canvas.getWidth();
+            int height = canvas.getHeight();
+
+            Bitmap grid = BitmapFactory.decodeResource(getResources(),R.drawable.grid);
+            Bitmap resize_grid = Bitmap.createScaledBitmap(grid, width-40, height-40, true);
+
+            canvas.drawBitmap(resize_grid,10,10,paint);
+            canvas.drawARGB(80,255,255,255);
+            //canvas.drawPath(path, paint); // 저장된 path 를 그려라
+
+            for (PathInfo p : data){
+                canvas.drawPath(p, p.getPaint());
+            }
+
+            super.onDraw(canvas);
         }
+        @Override
+        public boolean onTouchEvent(MotionEvent event) {
+
+
+            switch(event.getAction()) {
+                case MotionEvent.ACTION_DOWN :
+                    pathInfo.moveTo(event.getX(), event.getY()); // 자취에 그리지 말고 위치만 이동해라
+                    break;
+                case MotionEvent.ACTION_MOVE :
+                    pathInfo.lineTo(event.getX(), event.getY()); // 자취에 선을 그려라
+                    break;
+                case MotionEvent.ACTION_UP :
+                    break;
+            }
+
+            data.add(pathInfo);
+
+            invalidate(); // 화면을 다시그려라
+
+            return true;
+        }
+
+
+
+        class PathInfo extends Path {
+            private Paint paint;
+
+            PathInfo(){
+                paint = new Paint();
+            }
+
+            public Paint getPaint(){
+                return paint;
+            }
+
+            public void setPaint(Paint paint){
+                this.paint = paint;
+            }
+        }
+
     }
 }
+
+
 
 

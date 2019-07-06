@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="보드게임이란?"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubText"
+                android:text="보드게임이란 카드로 게임을 진행하는 카드게임과 주사위 및 병마를 특징으로 하는 보드게임으로 나누기도 하지만, 통상적으로 둘 모두를 포괄하여 보드게임이라고 칭한다. 보드게임은 플레이어가 직접 대면하여 즐기기 때문에 주로 혼자 즐기게 되는 컴퓨터 게임과 다른 색다른 맛을 지니게 된다." />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

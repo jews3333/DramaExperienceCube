@@ -47,7 +47,7 @@ public class SubActivity1 extends AppCompatActivity {
         btn_sub1_frag1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               setFrag(0);
+                setFrag(0);
             }
         });
 
@@ -57,14 +57,12 @@ public class SubActivity1 extends AppCompatActivity {
                 setFrag(1);
             }
         });
-
         btn_sub1_frag3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 setFrag(2);
             }
         });
-
         btn_sub1_frag4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -74,7 +72,6 @@ public class SubActivity1 extends AppCompatActivity {
 
 
         btn_back = (ImageButton)findViewById(R.id.btn_back);
-
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -83,7 +80,6 @@ public class SubActivity1 extends AppCompatActivity {
         });
 
         btn_home = (ImageButton)findViewById(R.id.btn_home);
-
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

@@ -83,6 +83,18 @@
             android:name=".MovingActivity"
             android:screenOrientation="landscape"/>
 
+        <activity
+            android:name=".GameActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".EffectsActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity
+            android:name=".SoundActivity"
+            android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

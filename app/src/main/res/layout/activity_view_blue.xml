@@ -45,34 +45,24 @@
         android:id="@+id/btn_home"
         style="@style/BtnHome"/>
 
-    <Button
+    <ImageButton
         android:id="@+id/btn_list"
-        style="@style/BtnStart"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/btn_home"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="283dp"
-        android:onClick="StartButton"
-        android:text="리스트" />
+        style="@style/BtnList"/>
 
     <ScrollView
         android:id="@+id/scrollView"
-        android:layout_width="wrap_content"
+        android:layout_width="240dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="191dp"
-        android:layout_marginRight="160dp"
-        android:layout_marginBottom="0dp"
-        android:background="@drawable/reading_bg"
-        android:padding="15dp"
-        android:visibility="visible">
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="160dp">
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:visibility="visible" />
+            android:padding="15dp"
+            android:background="@drawable/reading_bg"
+            android:visibility="gone" />
 
     </ScrollView>
 
