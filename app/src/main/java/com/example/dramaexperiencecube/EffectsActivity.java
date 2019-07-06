@@ -1,12 +1,18 @@
 package com.example.dramaexperiencecube;
 
 import android.content.Intent;
+import android.content.pm.PackageManager;
+import android.content.pm.ResolveInfo;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class EffectsActivity extends AppCompatActivity {
 
@@ -31,9 +37,17 @@ public class EffectsActivity extends AppCompatActivity {
         btn_light.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+
                 Intent intent = getPackageManager().getLaunchIntentForPackage("com.xiaomi.smarthome");
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
-                startActivity(intent);
+
+                if(intent != null){
+                    intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent);
+                } else {
+                    String url = "market://details?id=" + "com.xiaomi.smarthome";
+                    Intent market = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
+                    startActivity(market);
+                }
             }
         });
 
@@ -54,5 +68,6 @@ public class EffectsActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
     }
 }
