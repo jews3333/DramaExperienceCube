@@ -32,8 +32,9 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
     Button recordBtn;
     Button stopBtn;
     ImageButton btn_back, btn_home;
-
+    String[] MyPlanstr;
     boolean isRecording = false;
+    boolean getTxt = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,7 +49,7 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
             final TextView txt_human = (TextView)findViewById(R.id.txt_human);
             final TextView txt_make = (TextView)findViewById(R.id.txt_make);
             Intent intent = getIntent();
-            String[] MyPlanstr;
+
 
         try {
             MyPlanstr = intent.getStringArrayExtra("MyPlanstr");
@@ -61,10 +62,11 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
                 txt_where.setText(MyPlanstr[0]);
                 txt_time.setText(MyPlanstr[1]);
                 txt_location.setText(MyPlanstr[2]);
-                txt_human.setText(MyPlanstr[3]);
-                txt_make.setText(MyPlanstr[4]);
+                txt_human.setText(MyPlanstr[3] + "  " + MyPlanstr[4] + "  " + MyPlanstr[5] + "  " + MyPlanstr[6]);
+                txt_make.setText(MyPlanstr[7]);
+            getTxt = true;
         }catch (Exception e){
-            System.out.println("error : "  + e);
+            System.out.println(" : "  + e);
         }
 
 
@@ -164,6 +166,11 @@ public class ReadingActivity extends AppCompatActivity implements Button.OnClick
                         // 프로그램을 종료한다
                         //Toast.makeText(getApplicationContext(),items[id] + " 선택했습니다.", Toast.LENGTH_SHORT).show();
                         if (items[id] == "재생"){
+                            Intent intent = new Intent(ReadingActivity.this, PlayReadingActivity.class);
+                            if(getTxt){
+                                intent.putExtra("MyPlanstr", MyPlanstr);
+                                startActivity(intent);
+                            }
 
                             player.playAll();
 

@@ -80,6 +80,10 @@
             android:screenOrientation="landscape"/>
 
         <activity
+            android:name=".PlayReadingActivity"
+            android:screenOrientation="landscape"/>
+
+        <activity
             android:name=".MovingActivity"
             android:screenOrientation="landscape"/>
 

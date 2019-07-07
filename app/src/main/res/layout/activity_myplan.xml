@@ -15,11 +15,23 @@
         android:id="@+id/edit_txt"
         android:layout_width="256dp"
         android:layout_height="53dp"
-        android:text="직접 입력"
-        android:visibility="visible"
-        android:layout_marginBottom="105dp"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_alignParentBottom="true"/>
+        android:layout_marginBottom="105dp"
+        android:text="직접 입력"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btn_human11"
+        style="@style/planListBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="500dp"
+        android:layout_marginBottom="38dp"
+        android:text="직접입력 선택"
+        android:visibility="gone" />
 
     <ScrollView
         android:layout_width="match_parent"
@@ -38,25 +50,25 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                android:visibility="visible">
+                android:visibility="gone">
 
                 <Button
                     android:id="@+id/btn_where1"
                     style="@style/planListBtn"
                     android:text="현장체험학습 날, 갑자기 배가 아픈 상황"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_where3"
                     style="@style/planListBtn"
                     android:text="내가 좋아하는 이성친구를 친한친구도 좋아하는 상황"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
                 <Button
                     android:id="@+id/btn_where2"
                     style="@style/planListBtn"
                     android:text="학예회를 준비하는 데 하고싶은 역할이 겹치는 상황"
-                    android:visibility="visible" />
+                    android:visibility="gone" />
 
             </LinearLayout>
 
@@ -247,41 +259,41 @@
                     android:id="@+id/txt_where"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="22dp"
                     android:layout_marginBottom="3dp"
                     android:text="장면"
-                    android:visibility="gone" />
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:visibility="visible" />
 
                 <TextView
                     android:id="@+id/txt_time"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="22dp"
                     android:layout_marginBottom="3dp"
                     android:text="때"
-                    android:visibility="gone" />
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:visibility="visible" />
 
                 <TextView
                     android:id="@+id/txt_location"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="22dp"
                     android:layout_marginBottom="3dp"
                     android:text="장소"
-                    android:visibility="gone" />
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:visibility="visible" />
 
                 <TextView
                     android:id="@+id/txt_human"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:textAlignment="center"
-                    android:textSize="22dp"
                     android:layout_marginBottom="3dp"
                     android:text="인물"
-                    android:visibility="gone" />
+                    android:textAlignment="center"
+                    android:textSize="22dp"
+                    android:visibility="visible" />
 
 
             </LinearLayout>
@@ -303,7 +315,7 @@
             android:id="@+id/btn_where"
             style="@style/BtnStart"
             android:text="입력"
-            android:visibility="visible" />
+            android:visibility="gone" />
 
         <!--언제 입력-->
         <Button
@@ -328,10 +340,16 @@
 
         <!--다 작성했으면 대본리딩-->
         <Button
+            android:id="@+id/btn_make"
+            style="@style/BtnStart"
+            android:text="대사 입력"
+            android:visibility="visible" />
+
+        <Button
             android:id="@+id/btn_reading"
             style="@style/BtnStop"
             android:text="대본리딩"
-            android:visibility="gone" />
+            android:visibility="visible" />
     </LinearLayout>
 
 

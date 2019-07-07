@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/layout_make"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:orientation="vertical"
+        android:visibility="visible">
+
+        <TextView
+            android:id="@+id/txt_where"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="장면"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="때"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:visibility="visible" />
+
+        <TextView
+            android:id="@+id/txt_make"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="3dp"
+            android:text="대본"
+            android:textAlignment="center"
+            android:textSize="30dp"
+            android:visibility="visible" />
+
+        <LinearLayout
+            android:id="@+id/layout_location"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/location"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:src="@drawable/location"
+                android:visibility="visible" />
+
+            <ImageView
+                android:id="@+id/location_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:src="@drawable/location_1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/location_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_2" />
+
+            <ImageView
+                android:id="@+id/location_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_3" />
+
+            <ImageView
+                android:id="@+id/location_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_4" />
+
+            <ImageView
+                android:id="@+id/location_5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_5" />
+
+            <ImageView
+                android:id="@+id/location_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_6" />
+
+            <ImageView
+                android:id="@+id/location_7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_7" />
+
+            <ImageView
+                android:id="@+id/location_8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_8" />
+
+            <ImageView
+                android:id="@+id/location_9"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/location_9" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/human_1"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:src="@drawable/human_1"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/human_2"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/human_2"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/human_3"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/human_3"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/human_4"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:src="@drawable/human_4"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/human_5"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human_5" />
+
+            <ImageView
+                android:id="@+id/human_6"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human_6" />
+
+            <ImageView
+                android:id="@+id/human_7"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human_7" />
+
+            <ImageView
+                android:id="@+id/human_8"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human_8" />
+
+            <ImageView
+                android:id="@+id/human_9"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human_9" />
+
+            <ImageView
+                android:id="@+id/human_10"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human_10" />
+
+            <ImageView
+                android:id="@+id/human"
+                android:layout_width="80dp"
+                android:layout_height="80dp"
+                android:layout_weight="1"
+                android:visibility="gone"
+                android:src="@drawable/human"/>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</android.support.constraint.ConstraintLayout>
