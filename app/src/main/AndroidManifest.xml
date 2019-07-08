@@ -99,6 +99,10 @@
             android:name=".SoundActivity"
             android:screenOrientation="landscape"/>
 
+        <activity
+            android:name=".LicenseActivity"
+            android:screenOrientation="landscape"/>
+
     </application>
 
 </manifest>

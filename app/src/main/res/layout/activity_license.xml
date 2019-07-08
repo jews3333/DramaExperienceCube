@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <TextView
+        style="@style/Title"
+        android:text="라이센스"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="폰트" />
+
+            <TextView
+                style="@style/SubText"
+                android:text="로고 및 텍스트 디자인에 '여기어때 잘난체'를 포함하였습니다." />
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="이미지" />
+
+            <TextView
+                style="@style/SubText"
+                android:text="https://www.freepik.com : 앱 화면구성(배경화면 및 아이콘) 무료 라이센스(개인 및 상업적 용도 사용가능)" />
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="효과음 및 배경음악" />
+
+            <TextView
+                style="@style/SubText"
+                android:text="- https://freesound.org : 효과음\n- CC 1.0(저작권 없음), CC 3.0(저작자표시), CC By Nc 3.0(저작자표시, 비영리) 라이센스 자료 활용" />
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="보드게임 컨텐츠 및 연극의 이해 " />
+
+            <TextView
+                style="@style/SubText"
+                android:text="초등학교 5-6학년군 2015 개정 교육과정 교수학습자료 국어\n무조건 Yes or Yes 예시 연극 동영상(www.ideagorilla.com)" />
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
+
+</RelativeLayout>

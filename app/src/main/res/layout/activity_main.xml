@@ -103,5 +103,11 @@
             android:fontFamily="@font/jalnan"/>
     </LinearLayout>
 
+    <Button
+        android:id="@+id/btn_license"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:text="라이센스"/>
+
 
 </RelativeLayout>
