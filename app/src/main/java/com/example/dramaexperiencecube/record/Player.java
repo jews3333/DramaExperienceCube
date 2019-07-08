@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Environment;
 import android.os.Handler;
+import android.view.View;
 import android.widget.Toast;
 
 import java.io.File;
@@ -14,95 +15,109 @@ public class Player implements MediaPlayer.OnCompletionListener {
     private Activity activity;
     private File[] playlist;
     private int playIndex = 0;
+    private String basePath = "";
+    private boolean playAllFlag = false;
+
+    private Handler handler;
+    private Runnable nextRunnable;
+
+    private OnCompletionListener onCompletionListener;
 
     public Player(Activity activity, String dir) {
         this.activity = activity;
-        String basePath = Environment.getExternalStorageDirectory().toString();
-        File directory = new File(basePath + dir);
+        basePath = Environment.getExternalStorageDirectory().toString() + dir;
+        File directory = new File(basePath);
         playlist = directory.listFiles();
     }
 
-    // 해당 디렉토리 통째로 비우기
-    public void setDirEmpty(String dirName){
-        Toast.makeText(this.activity, "삭제삭제.", Toast.LENGTH_SHORT).show();
-        String path = Environment.getExternalStorageDirectory().toString() + dirName;
-
-    File dir = new File(path);
-    File[] childFileList = dir.listFiles();
-    if (dir.exists()) {
-        for (File childFile : childFileList) {
-            if (childFile.isDirectory()) {
-                setDirEmpty(childFile.getAbsolutePath());
-                //하위 디렉토리
-                } else {
-                childFile.delete();
-                //하위 파일
-                }
-        } dir.delete();
-     }
+    public void play(String filename) {
+        playAudio(basePath + filename + ".mp3");
     }
 
 
+    public void playAll() {
+        playAllFlag = true;
+        playNext();
+    }
 
-                public void playAll() {
+    private void playNext() {
+        if (playIndex > playlist.length - 1) {
+            stop();
+            return;
+        }
+
+        File currentAudio = playlist[playIndex];
+        playAudio(currentAudio.getAbsolutePath());
+
+        playIndex += 1;
+    }
+
+    @Override
+    public void onCompletion(MediaPlayer mediaPlayer) {
+        if (playAllFlag) {
+            handler = new Handler();
+            nextRunnable = new Runnable() {
+                public void run() {
                     playNext();
                 }
+            };
+            handler.postDelayed(nextRunnable, 1000); // 1초 대기
+        }
 
-                private void playNext() {
-                    if (playIndex > playlist.length - 1) {
-                        stop();
-                        return;
-                    }
+        if (onCompletionListener != null) onCompletionListener.onCompletion(mediaPlayer, playIndex);
+    }
 
-                    File currentAudio = playlist[playIndex];
-                    playAudio(currentAudio.getAbsolutePath());
+    public void stop() {
+        stopAudio();
+        closePlayer();
+        playAllFlag = false;
+        if (nextRunnable != null) handler.removeCallbacks(nextRunnable);
+    }
 
-                    playIndex += 1;
-                }
+    private void playAudio(String filename) {
+        try {
+            closePlayer();
 
-                @Override
-                public void onCompletion(MediaPlayer mediaPlayer) {
-                    Handler handler = new Handler();
-                    handler.postDelayed(new Runnable() {
-                        public void run() {
-                            playNext();
-                        }
-                    }, 1000); // 1초 대기
-                }
+            player = new MediaPlayer();
+            player.setOnCompletionListener(this);
+            player.setDataSource(filename);
+            player.prepare();
+            player.start();
 
-                public void stop() {
-                    stopAudio();
-                    closePlayer();
-                }
+            Toast.makeText(this.activity, "재생 시작됨.", Toast.LENGTH_SHORT).show();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
-                private void playAudio(String filename) {
-                    try {
-                        closePlayer();
+    private void stopAudio() {
+        if (player != null && player.isPlaying()) {
+            player.stop();
 
-                        player = new MediaPlayer();
-                        player.setOnCompletionListener(this);
-                        player.setDataSource(filename);
-                        player.prepare();
-                        player.start();
+            Toast.makeText(this.activity, "재생 중지됨.", Toast.LENGTH_SHORT).show();
+        }
+    }
 
-                        Toast.makeText(this.activity, "재생 시작됨.", Toast.LENGTH_SHORT).show();
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
+    private void closePlayer() {
+        if (player != null) {
+            player.release();
+            player = null;
+        }
+    }
 
-                private void stopAudio() {
-                    if (player != null && player.isPlaying()) {
-                        player.stop();
+    public void setPlayIndex(int playIndex) {
+        this.playIndex = playIndex;
+    }
 
-                        Toast.makeText(this.activity, "재생 중지됨.", Toast.LENGTH_SHORT).show();
-                    }
-                }
+    public int getPlayIndex() {
+        return playIndex;
+    }
 
-                private void closePlayer() {
-                    if (player != null) {
-                        player.release();
-                        player = null;
-                    }
-                }
-            }
+    public interface OnCompletionListener {
+        public void onCompletion(MediaPlayer mediaPlayer, int position);
+    }
+
+    public void setOnCompletionListener(OnCompletionListener onCompletionListener) {
+        this.onCompletionListener = onCompletionListener;
+    }
+}

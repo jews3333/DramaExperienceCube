@@ -13,11 +13,7 @@ public class Recorder {
     private Activity activity;
 
     private String basePath;
-    private String subPath;
-    private String subPathName;
     private File directory;
-
-    private int currentRecordIndex;
 
     private MediaRecorder recorder;
 
@@ -45,18 +41,31 @@ public class Recorder {
         if (!this.directory.exists()) this.directory.mkdirs();
     }
 
-    /**
-     * 서브 디렉토리 경로 설정 (녹음된 mp3 파일이 저장될 경로)
-     *
-     * @param saveDir {String} 저장 경로
-     *
-     */
-    public void setSubDir(String saveDir) {
-        subPathName = saveDir;
-        subPath = basePath + saveDir;
+    // 서브 디렉토리 통째로 비우기
+    public void empty() {
+//        Toast.makeText(this.activity, "삭제", Toast.LENGTH_SHORT).show();
+        enptyDir(basePath, false);
+    }
 
-        File subDirectory = new File(subPath);
-        if (!subDirectory.exists()) subDirectory.mkdirs();
+    // 해당 디렉토리 통째로 비우기
+    private void enptyDir(String path, boolean deletePath) {
+        File dir = new File(path);
+
+        if (dir.exists()) {
+            File[] childFileList = dir.listFiles();
+
+            for (File childFile : childFileList) {
+                if (childFile.isDirectory()) {
+                    enptyDir(childFile.getAbsolutePath(), true);
+                    //하위 디렉토리
+                } else {
+                    childFile.delete();
+                    //하위 파일
+                }
+            }
+
+            if (deletePath) dir.delete();
+        }
     }
 
     /**
@@ -65,14 +74,6 @@ public class Recorder {
      */
     public File[] getRecordList() {
         return this.directory.listFiles();
-    }
-
-    /**
-     * 현재 몇 번째 녹음중인지에 관한 인덱스값 리턴
-     *
-     */
-    public int getCurrentRecordIndex() {
-        return this.currentRecordIndex;
     }
 
 
@@ -84,14 +85,14 @@ public class Recorder {
      * 녹음 시작
      *
      */
-    public void record() {
+    public void record(String filename) {
         recorder = new MediaRecorder();
 
         recorder.setAudioSource(MediaRecorder.AudioSource.MIC); // 어디에서 음성 데이터를 받을 것인지
         recorder.setOutputFormat(MediaRecorder.OutputFormat.MPEG_4); // 압축 형식 설정
         recorder.setAudioEncoder(MediaRecorder.AudioEncoder.DEFAULT); // 인코더 설정
 
-        recorder.setOutputFile(subPath + subPathName + currentRecordIndex + ".mp3");
+        recorder.setOutputFile(basePath + filename + ".mp3");
 
         try {
             recorder.prepare();
@@ -104,27 +105,9 @@ public class Recorder {
     }
 
     /**
-     * 다음 녹음 준비
-     *
-     */
-    public void prepareNext() {
-        currentRecordIndex += 1;
-        stopRecord();
-    }
-
-    /**
-     * 현재 연극 대본 녹음 끝내기
-     *
-     */
-    public void stop() {
-        currentRecordIndex = 0;
-        stopRecord();
-    }
-
-    /**
      * 녹음 중지
      */
-    private void stopRecord() {
+    public void stopRecord() {
         if (recorder != null) {
             recorder.stop();
             recorder.release();

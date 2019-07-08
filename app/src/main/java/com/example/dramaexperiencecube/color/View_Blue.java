@@ -27,8 +27,6 @@ public class View_Blue extends Activity{
     public View_Blue(Activity activity, String baseDir) {
         this.activity = activity;
         this.basePath = "android.resource://" + baseDir + "/";
-        Toast.makeText(this.activity, basePath, Toast.LENGTH_LONG).show();
-        //this.basePath = Environment.getExternalStorageDirectory().toString() + baseDir;
 
         // 권한 요청
         String[] permissions = {

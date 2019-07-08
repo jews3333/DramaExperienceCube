@@ -15,22 +15,9 @@
         android:layout_marginBottom="35dp">
 
         <Button
-            android:id="@+id/btn_prepare"
+            android:id="@+id/btn_goplan"
             style="@style/BtnStart"
-            android:text="녹음시작"/>
-
-        <Button
-            android:id="@+id/btn_record"
-            style="@style/BtnStart"
-            android:text="녹음"
-            android:visibility="gone"/>
-
-        <Button
-            android:id="@+id/btn_stop"
-            style="@style/BtnStop"
-            android:text="중지"
-            android:visibility="gone"
-            android:layout_marginLeft="10dp"/>
+            android:text="연극시작" />
 
     </LinearLayout>
 
@@ -56,54 +43,5 @@
     <ImageButton
         android:id="@+id/btn_home"
         style="@style/BtnHome"/>
-
-    <LinearLayout
-        android:id="@+id/layout_make"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:visibility="gone">
-
-        <TextView
-            android:id="@+id/txt_where"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="30sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_time"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="30sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_location"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="30sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_human"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="30sp"
-            android:visibility="gone" />
-
-        <TextView
-            android:id="@+id/txt_make"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="TextView"
-            android:textSize="30sp"
-            android:visibility="gone" />
-        
-    </LinearLayout>
 
 </RelativeLayout>

@@ -38,13 +38,13 @@ public class EffectsActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                Intent intent = getPackageManager().getLaunchIntentForPackage("com.xiaomi.smarthome");
+                Intent intent = getPackageManager().getLaunchIntentForPackage("com.yeelight.cherry");
 
                 if(intent != null){
                     intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                 } else {
-                    String url = "market://details?id=" + "com.xiaomi.smarthome";
+                    String url = "market://details?id=" + "com.yeelight.cherry";
                     Intent market = new Intent(Intent.ACTION_VIEW, Uri.parse(url));
                     startActivity(market);
                 }
