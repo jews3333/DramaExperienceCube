@@ -7,24 +7,44 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.example.dramaexperiencecube.data.Drama;
+
+import com.example.dramaexperiencecube.data.DramaScript;
+
+import java.util.ArrayList;
 
 public class RealityActivity extends AppCompatActivity {
 
     Button btn_sub_btn_ReadingActivity, btn_moving;
     ImageButton btn_back,btn_home;
 
+    String where;
+    String time;
+    String location;
+    ArrayList<String> humans;
+    ArrayList<DramaScript> scripts;
+    Drama drama;
+
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reality);
-
+        drama = new Drama();
         btn_sub_btn_ReadingActivity = (Button)findViewById(R.id.btn_ReadingActivity);
 
+        // 연극 시작으로 이동
         btn_sub_btn_ReadingActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Intent intent = new Intent(RealityActivity.this, ReadingActivity.class);
-                startActivity(intent);
+                try {
+                    ((ReadingActivity)ReadingActivity.context).getActive();
+                }catch (Exception e){
+                    System.out.println("Error : " + e);
+                    Toast.makeText(RealityActivity.this, "저장된 연극이 없습니다..", Toast.LENGTH_SHORT).show();
+                }
+
             }
         });
 

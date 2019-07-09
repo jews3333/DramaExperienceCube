@@ -1,6 +1,7 @@
 package com.example.dramaexperiencecube;
 
 
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
@@ -42,11 +43,14 @@ public class ReadingActivity extends AppCompatActivity implements ScriptAdapter.
     ArrayList<DramaScript> scripts;
 
     RecordDialog recordDialog;
+    public static Context context;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reading);
+
+        context = this;
 
         Intent intent = getIntent();
         where = intent.getStringExtra("where");
@@ -103,6 +107,8 @@ public class ReadingActivity extends AppCompatActivity implements ScriptAdapter.
             }
         });
     }
+
+
 
     @Override
     public void onClickItem(View item, final int position) {
@@ -165,5 +171,15 @@ public class ReadingActivity extends AppCompatActivity implements ScriptAdapter.
         myAdapter = new ScriptAdapter(scripts);
         myAdapter.setOnClickItemListener(this);
         mRecyclerView.swapAdapter(myAdapter, false);
+    }
+
+    public void getActive(){
+        Intent intent = new Intent(ReadingActivity.this, PlayReadingActivity.class);
+        intent.putExtra("where", where);
+        intent.putExtra("time", time);
+        intent.putExtra("location", location);
+        intent.putStringArrayListExtra("humans", humans);
+        intent.putParcelableArrayListExtra("scripts", scripts);
+        startActivity(intent);
     }
 }

@@ -14,7 +14,6 @@ import android.widget.TextView;
 
 import com.example.dramaexperiencecube.data.Drama;
 import com.example.dramaexperiencecube.data.DramaScript;
-import com.example.dramaexperiencecube.dialog.DECDialog;
 import com.example.dramaexperiencecube.dialog.ScriptDialog;
 
 import java.util.ArrayList;
