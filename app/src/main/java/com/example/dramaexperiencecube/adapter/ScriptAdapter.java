@@ -1,5 +1,8 @@
 package com.example.dramaexperiencecube.adapter;
 
+import android.app.Activity;
+import android.app.ActivityManager;
+import android.content.Context;
 import android.graphics.Color;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
@@ -7,11 +10,15 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.dramaexperiencecube.MainActivity;
+import com.example.dramaexperiencecube.PlayReadingActivity;
 import com.example.dramaexperiencecube.R;
 import com.example.dramaexperiencecube.data.DramaScript;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class ScriptAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>  {
     private OnClickItemListener onClickItemListener;
@@ -49,6 +56,8 @@ public class ScriptAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         return new MyViewHolder(v);
     }
 
+
+
     @Override
     public void onBindViewHolder(@NonNull RecyclerView.ViewHolder holder, final int position) {
         final MyViewHolder myViewHolder = (MyViewHolder) holder;
@@ -59,7 +68,8 @@ public class ScriptAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
 
         boolean hasAudioPath = !script.getAudioPath().equals("");
         boolean isHighlighted = highlightSelection ? selectedPos == position : hasAudioPath;
-        item.setTextColor(isHighlighted ? Color.BLUE : Color.WHITE);
+        item.setTextColor(isHighlighted ? Color.parseColor("#ffffff") : Color.parseColor("#30ffffff"));
+
 
         item.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -83,4 +93,5 @@ public class ScriptAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
         selectedPos = position;
         notifyItemChanged(selectedPos);
     }
+
 }

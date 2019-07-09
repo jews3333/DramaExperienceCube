@@ -31,6 +31,12 @@
         <item name="android:background">@drawable/bg_black</item>
     </style>
 
+    <style name="Background4">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+        <item name="android:background">@drawable/bg_black2</item>
+    </style>
+
     <style name="Container" parent="@android:style/Widget">
         <item name="android:layout_marginTop">100dp</item>
         <item name="android:layout_marginBottom">120dp</item>
@@ -83,6 +89,18 @@
         <item name="android:layout_marginLeft">10dp</item>
     </style>
 
+    <style name="BtnHelp" parent="@android:style/Widget.ImageButton">
+        <item name="android:layout_width">60dp</item>
+        <item name="android:layout_height">60dp</item>
+        <item name="android:background">@drawable/cycle_button</item>
+        <item name="android:src">@drawable/ico_help</item>
+        <item name="android:scaleType">fitCenter</item>
+        <item name="android:layout_alignParentLeft">true</item>
+        <item name="android:layout_marginTop">80dp</item>
+        <item name="android:layout_marginLeft">10dp</item>
+    </style>
+
+
     <style name="BtnSize" parent="@android:style/Widget.Button">
         <item name="android:layout_width">200dp</item>
         <item name="android:layout_height">120dp</item>
@@ -98,12 +116,29 @@
         <item name="android:textStyle">bold</item>
     </style>
 
+    <style name="SubTitle2">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">20sp</item>
+        <item name="android:layout_marginBottom">5dp</item>
+        <item name="android:textColor">#fff</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
     <style name="SubText" parent="@android:style/Widget.TextView">
         <item name="android:layout_width">match_parent</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:textSize">16sp</item>
         <item name="android:layout_marginBottom">10dp</item>
         <item name="android:textColor">#a3312f</item>
+    </style>
+
+    <style name="SubText2" parent="@android:style/Widget.TextView">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:layout_marginBottom">10dp</item>
+        <item name="android:textColor">#fff</item>
     </style>
 
     <style name="Tip">
@@ -177,6 +212,11 @@
         <item name="android:layout_height">70dp</item>
         <item name="android:layout_margin">5dp</item>
         <item name="android:textColor">#00000000</item>
+    </style>
+    
+    <style name="editColor" parent="Widget.AppCompat.EditText">
+        <item name="colorControlNormal">#fff</item>
+        <item name="android:colorControlActivated">#fff</item>
     </style>
 
 </resources>

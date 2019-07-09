@@ -108,5 +108,9 @@
         android:id="@+id/btn_home"
         style="@style/BtnHome"/>
 
+    <ImageButton
+        android:id="@+id/btn_help"
+        style="@style/BtnHelp"/>
+
 
 </RelativeLayout>

@@ -108,11 +108,11 @@ public class PlayReadingActivity extends Activity {
         human_10 = (ImageView)findViewById(R.id.human_10);
         ArrayList<String> humans = get_humans;
         try{
-            String[] str_location = {"학교", "현장체험학습 장소", "버스 안", "교실", "집", "운동장", "PC방", "도서관", "창원 시내"};
-            String[] str_human = {"해인(남학생)", "지민(여학생)", "선생님", "아빠", "엄마", "호랑이", "사자", "로봇", "할아버지", "요정"};
+            String[] str_location = {"학교", "공원", "버스 정류소", "교실", "집", "운동장", "PC방", "도서관", "창원 시내"};
+            String[] str_human = {"남학생", "여학생", "선생님", "아빠", "엄마", "호랑이", "사자", "코끼리", "곰", "여우"};
             MyPlanstr = intent.getStringArrayExtra("MyPlanstr");
             txt_where.setText("장면 : " + get_where);
-            txt_time.setText("때 : " + get_time);
+            txt_time.setText("언제 : " + get_time);
 //            txt_make.setText("대본 : " + MyPlanstr[7]);
             //배경 설정
             for(int i = 0; i < str_location.length; i++) {

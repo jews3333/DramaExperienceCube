@@ -2,9 +2,12 @@ package com.example.dramaexperiencecube;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.TypedValue;
 import android.view.View;
+import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -374,7 +377,14 @@ public class MyPlanActivity extends AppCompatActivity {
     final ArrayList<String> arraylist = new ArrayList<String>();
     public void setListScripts(String selectedHuman, String script){
         arraylist.add(selectedHuman + " : " + script);
-        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arraylist);
+        ArrayAdapter<String> adapter = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, arraylist){
+            @Override
+            public View getView(int position, View convertView, ViewGroup parent){
+                TextView item = (TextView) super.getView(position,convertView,parent);
+                item.setTextColor(Color.parseColor("#FFFFFF"));
+                return item;
+            }
+        };
         final ListView list = (ListView)findViewById(R.id.list_scripts);
         list.setAdapter(adapter);
     }

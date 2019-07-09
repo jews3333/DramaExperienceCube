@@ -42,7 +42,9 @@ public class RealityActivity extends AppCompatActivity {
                     ((ReadingActivity)ReadingActivity.context).getActive();
                 }catch (Exception e){
                     System.out.println("Error : " + e);
-                    Toast.makeText(RealityActivity.this, "저장된 연극이 없습니다..", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(RealityActivity.this, "극본을 만들기로 이동합니다.", Toast.LENGTH_SHORT).show();
+                    Intent intent = new Intent(RealityActivity.this, MyPlanActivity.class);
+                    startActivity(intent);
                 }
 
             }

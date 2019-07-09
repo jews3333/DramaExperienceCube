@@ -23,7 +23,7 @@ public class YesoryesActivity extends AppCompatActivity {
     TextView txt_Level1;
     TextView txt_Level2;
 
-    ImageButton btn_back,btn_home;
+    ImageButton btn_back,btn_home,btn_help;
 
     private boolean _isBtnDown1;
     private boolean _isBtnDown2;
@@ -78,6 +78,16 @@ public class YesoryesActivity extends AppCompatActivity {
         btn_Level1.setOnTouchListener(onBtnTouchListener1);
         btn_Level2.setOnTouchListener(onBtnTouchListener2);
         btn_All_Level.setOnTouchListener(onBtnTouchListener3);
+
+        btn_help = (ImageButton)findViewById(R.id.btn_help);
+        btn_help.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(YesoryesActivity.this, YesorysesHelpActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
         btn_back = (ImageButton)findViewById(R.id.btn_back);
 
