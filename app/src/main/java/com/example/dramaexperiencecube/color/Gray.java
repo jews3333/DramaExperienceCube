@@ -7,7 +7,6 @@ import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
-import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
@@ -73,7 +72,7 @@ public class Gray extends Activity {
         //비디오뷰 포커스를 요청함
         videoView.requestFocus();
 
-        String path = "android.resource://" + getPackageName() + "/" + R.raw.gray_1_surprise_student;
+        String path = "android.resource://" + getPackageName() + "/" + R.raw.gray_1;
 
         videoView.setVideoPath(path);
 

@@ -2,7 +2,6 @@ package com.example.dramaexperiencecube.color;
 
 import android.Manifest;
 import android.app.Activity;
-import android.widget.Toast;
 
 import com.example.dramaexperiencecube.R;
 import com.example.dramaexperiencecube.record.Permissions;
@@ -51,7 +50,7 @@ public class View_Yellow extends Activity{
         for(int count=0; count < fields.length; count++){
 //            Log.i("Raw Asset name: ", fields[count].getName().substring(0,3));
 
-            if(fields[count].getName().substring(0,6).equals("yellow")){
+            if(fields[count].getName().substring(0,5).equals("yello")){
 //                Log.i("내가 뿌려줄 이름들", fields[count].getName());
                 listStr[cnt] = (String)fields[count].getName();
                 cnt++;
