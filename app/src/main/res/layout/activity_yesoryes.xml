@@ -9,7 +9,7 @@
         android:id="@+id/textView"
         style="@style/Title"
         android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="Yes or Yes\n즉흥극"/>
 
     <LinearLayout
@@ -21,40 +21,44 @@
 
         <TextView
             android:layout_width="wrap_content"
-            android:layout_height="44dp"
-            android:textSize="32dp"
-            android:layout_marginBottom="5dp"
+            android:layout_height="wrap_content"
+            android:textSize="44sp"
+            android:layout_marginBottom="12dp"
             android:textColor="#fff"
             android:text="당신이 "/>
 
         <TextView
             android:id="@+id/txt_Level1"
-            android:layout_width="150dp"
-            android:layout_height="44dp"
-            android:layout_marginBottom="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:layout_marginBottom="12dp"
             android:background="#ffffff"
             android:text="1수준"
             android:textAlignment="center"
             android:textColor="#009e96"
-            android:textSize="32dp"
+            android:textSize="60sp"
             android:textStyle="bold" />
 
         <TextView
             android:id="@+id/txt_Level2"
-            android:layout_width="115dp"
-            android:layout_height="44dp"
-            android:textSize="32dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:textSize="60sp"
             android:textStyle="bold"
             android:textAlignment="center"
             android:background="#ffffff"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="12dp"
             android:textColor="#ae5da1"
             android:text="2수준"/>
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="44dp"
-            android:textSize="32dp"
+            android:textSize="44sp"
             android:textColor="#fff"
             android:text="그 사람인가요?"/>
     </LinearLayout>
@@ -66,35 +70,37 @@
         android:orientation="horizontal"
         android:layout_alignParentBottom="true"
         android:gravity="center"
-        android:layout_marginBottom="20dp">
+        android:layout_marginBottom="70dp">
 
         <Button
             android:id="@+id/btn_Level1"
             android:background="@drawable/cycle_button3"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:textColor="#009e96"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:text="1수준"/>
 
         <Button
             android:id="@+id/btn_All_Level"
             android:background="@drawable/cycle_button2"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
             android:textColor="#fff"
-            android:textSize="20sp"
+            android:textSize="32sp"
             android:textStyle="bold"
-            android:layout_marginLeft="150dp"
-            android:layout_marginRight="150dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
             android:text="전체"/>
 
         <Button
             android:id="@+id/btn_Level2"
             android:background="@drawable/cycle_button3"
-            android:layout_width="70dp"
-            android:layout_height="40dp"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
             android:textColor="#ae5da1"
+            android:textSize="24sp"
             android:textStyle="bold"
             android:text="2수준" />
 

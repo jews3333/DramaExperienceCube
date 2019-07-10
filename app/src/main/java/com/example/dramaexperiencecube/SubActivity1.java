@@ -37,10 +37,10 @@ public class SubActivity1 extends AppCompatActivity {
         sub1_fragment3 = new Sub1_Fragment3();
         sub1_fragment4 = new Sub1_Fragment4();
 
-        btn_sub1_frag1 = (Button)findViewById(R.id.btn_sub1_frag1);
-        btn_sub1_frag2 = (Button)findViewById(R.id.btn_sub1_frag2);
-        btn_sub1_frag3 = (Button)findViewById(R.id.btn_sub1_frag3);
-        btn_sub1_frag4 = (Button)findViewById(R.id.btn_sub1_frag4);
+        btn_sub1_frag1 = findViewById(R.id.btn_sub1_frag1);
+        btn_sub1_frag2 = findViewById(R.id.btn_sub1_frag2);
+        btn_sub1_frag3 = findViewById(R.id.btn_sub1_frag3);
+        btn_sub1_frag4 = findViewById(R.id.btn_sub1_frag4);
 
         setFrag(0);
 
@@ -71,7 +71,7 @@ public class SubActivity1 extends AppCompatActivity {
         });
 
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -79,12 +79,12 @@ public class SubActivity1 extends AppCompatActivity {
             }
         });
 
-        btn_home = (ImageButton)findViewById(R.id.btn_home);
+        btn_home = findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubActivity1.this, MainActivity.class);
-                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

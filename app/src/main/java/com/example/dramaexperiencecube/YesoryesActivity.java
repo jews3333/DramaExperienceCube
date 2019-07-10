@@ -37,12 +37,12 @@ public class YesoryesActivity extends AppCompatActivity {
         final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
         int r = (int) (Math.random() * 6);
 
-        txt_Level1 = (TextView) findViewById(R.id.txt_Level1);
-        txt_Level2 = (TextView) findViewById(R.id.txt_Level2);
+        txt_Level1 = findViewById(R.id.txt_Level1);
+        txt_Level2 = findViewById(R.id.txt_Level2);
 
-        btn_Level1 = (Button) findViewById(R.id.btn_Level1);
-        btn_Level2 = (Button) findViewById(R.id.btn_Level2);
-        btn_All_Level = (Button) findViewById(R.id.btn_All_Level);
+        btn_Level1 = findViewById(R.id.btn_Level1);
+        btn_Level2 = findViewById(R.id.btn_Level2);
+        btn_All_Level = findViewById(R.id.btn_All_Level);
 
         /*btn_Level1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -79,7 +79,7 @@ public class YesoryesActivity extends AppCompatActivity {
         btn_Level2.setOnTouchListener(onBtnTouchListener2);
         btn_All_Level.setOnTouchListener(onBtnTouchListener3);
 
-        btn_help = (ImageButton)findViewById(R.id.btn_help);
+        btn_help = findViewById(R.id.btn_help);
         btn_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -89,7 +89,7 @@ public class YesoryesActivity extends AppCompatActivity {
         });
 
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,13 +98,13 @@ public class YesoryesActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = (ImageButton)findViewById(R.id.btn_home);
+        btn_home = findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(YesoryesActivity.this, MainActivity.class);
-                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -257,17 +257,9 @@ public class YesoryesActivity extends AppCompatActivity {
         boolean result = false;
 
             if(num == 1){
-                    if(txt.equals(str2[r])){
-                        return true;
-                    }else {
-                        return false;
-                    }
+                return txt.equals(str2[r]);
             }else if(num == 2) {
-                    if(txt.equals(str1[r])){
-                        return true;
-                    }else {
-                        return false;
-                    }
+                return txt.equals(str1[r]);
             }
         return true;
     }

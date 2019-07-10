@@ -114,7 +114,7 @@ public class Player implements MediaPlayer.OnCompletionListener {
     }
 
     public interface OnCompletionListener {
-        public void onCompletion(MediaPlayer mediaPlayer, int position);
+        void onCompletion(MediaPlayer mediaPlayer, int position);
     }
 
     public void setOnCompletionListener(OnCompletionListener onCompletionListener) {

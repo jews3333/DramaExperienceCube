@@ -8,7 +8,7 @@
     <TextView
         android:id="@+id/MyPlan_Top"
         style="@style/Title"
-        android:layout_marginTop="10dp"
+        android:layout_marginTop="20dp"
         android:text="내가 만들어가는\n극본" />
 
 
@@ -16,10 +16,10 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_centerInParent="true"
-        android:layout_marginLeft="140dp"
-        android:layout_marginRight="140dp"
-        android:layout_marginTop="100dp"
-        android:layout_marginBottom="100dp">
+        android:layout_marginLeft="300dp"
+        android:layout_marginRight="300dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="200dp">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -344,8 +344,8 @@
                 <ListView
                     android:id="@+id/list_scripts"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
+                    android:layout_height="200dp"
+                    android:layout_marginTop="15dp"
                     android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>
@@ -356,9 +356,9 @@
     <LinearLayout
         android:id="@+id/MyPlan_Bottom"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="35dp"
+        android:layout_marginBottom="90dp"
         android:gravity="center"
         android:orientation="horizontal">
 
@@ -406,7 +406,8 @@
             android:id="@+id/btn_make"
             style="@style/BtnStart"
             android:text="대사 입력"
-            android:visibility="gone" />
+            android:visibility="gone"
+            android:layout_marginRight="40dp"/>
 
         <Button
             android:id="@+id/btn_reading"
@@ -415,6 +416,14 @@
             android:visibility="gone" />
 
     </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
 
 
 </RelativeLayout>

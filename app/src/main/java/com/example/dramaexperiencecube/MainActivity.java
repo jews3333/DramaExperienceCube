@@ -30,8 +30,8 @@ public class MainActivity extends AppCompatActivity {
 
 
 
-        btn_sub_activity1 = (Button)findViewById(R.id.btn_subActivity1);
-        btn_sub_activity2 = (Button)findViewById(R.id.btn_subActivity2);
+        btn_sub_activity1 = findViewById(R.id.btn_subActivity1);
+        btn_sub_activity2 = findViewById(R.id.btn_subActivity2);
 
         btn_sub_activity1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,7 +49,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        btn_help = (ImageButton) findViewById(R.id.btn_help);
+        btn_help = findViewById(R.id.btn_help);
         btn_help.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

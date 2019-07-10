@@ -32,7 +32,7 @@ public class RealityActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_reality);
         drama = new Drama();
-        btn_sub_btn_ReadingActivity = (Button)findViewById(R.id.btn_ReadingActivity);
+        btn_sub_btn_ReadingActivity = findViewById(R.id.btn_ReadingActivity);
 
         // 연극 시작으로 이동
         btn_sub_btn_ReadingActivity.setOnClickListener(new View.OnClickListener() {
@@ -50,7 +50,7 @@ public class RealityActivity extends AppCompatActivity {
             }
         });
 
-        btn_moving = (Button)findViewById(R.id.btn_moving);
+        btn_moving = findViewById(R.id.btn_moving);
 
         btn_moving.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -60,7 +60,7 @@ public class RealityActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -69,13 +69,13 @@ public class RealityActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = (ImageButton)findViewById(R.id.btn_home);
+        btn_home = findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(RealityActivity.this, MainActivity.class);
-                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

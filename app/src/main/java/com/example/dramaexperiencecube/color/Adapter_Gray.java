@@ -13,7 +13,7 @@ public class Adapter_Gray extends RecyclerView.Adapter<RecyclerView.ViewHolder> 
 
     private OnClickItemListener onClickItemListener;
     public interface OnClickItemListener {
-        public void onClickItem(View item);
+        void onClickItem(View item);
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

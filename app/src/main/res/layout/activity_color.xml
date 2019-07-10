@@ -6,7 +6,7 @@
     <TextView
         style="@style/Title"
         android:text="다양한\n감정표현 익히기"
-        android:layout_marginTop="5dp"/>
+        android:layout_marginTop="20dp"/>
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -18,14 +18,14 @@
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:gravity="center"
-            android:layout_marginBottom="5dp">
+            android:layout_marginBottom="15dp">
             <Button
                 android:id="@+id/btn_Red"
                 android:background="@drawable/button_red"
                 style="@style/BtnSize"
                 android:text="Red"
                 android:textColor="#fff"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="15dp"/>
 
             <Button
                 android:id="@+id/btn_Yellow"
@@ -45,7 +45,7 @@
                 style="@style/BtnSize"
                 android:text="Blue"
                 android:textColor="#0B173C"
-                android:layout_marginRight="5dp"/>
+                android:layout_marginRight="15dp"/>
 
             <Button
                 android:id="@+id/btn_Gray"
@@ -59,7 +59,7 @@
 
     <TextView
         style="@style/Tip"
-        android:text="조명의 색상에 따른 감정변화를 체험해보세요!"/>
+        android:text="다양한 감정표현을 체험하고 따라해보세요!"/>
 
     <ImageButton
         android:id="@+id/btn_back"

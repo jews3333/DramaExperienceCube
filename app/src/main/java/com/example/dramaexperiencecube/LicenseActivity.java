@@ -16,7 +16,7 @@ public class LicenseActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_license);
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -24,12 +24,12 @@ public class LicenseActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = (ImageButton)findViewById(R.id.btn_home);
+        btn_home = findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(LicenseActivity.this, MainActivity.class);
-                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

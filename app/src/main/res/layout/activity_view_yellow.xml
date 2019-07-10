@@ -2,6 +2,11 @@
 <RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     style="@style/Background">
+
+    <TextView
+        style="@style/Title"
+        android:text="Yellow"/>
+
     <LinearLayout
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
@@ -14,23 +19,28 @@
             android:id="@+id/view"
             style="@style/Video" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:gravity="center">
-            <Button
-                android:id="@+id/btnStart"
-                style="@style/BtnStart"
-                android:onClick="StartButton"
-                android:text="시작" />
+    </LinearLayout>
 
-            <Button
-                android:id="@+id/btnStop"
-                style="@style/BtnStop"
-                android:onClick="StopButton"
-                android:text="정지" />
-        </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="70dp">
+
+        <Button
+            android:id="@+id/btnStart"
+            style="@style/BtnStart"
+            android:onClick="StartButton"
+            android:layout_marginRight="20dp"
+            android:text="시작" />
+
+        <Button
+            android:id="@+id/btnStop"
+            style="@style/BtnStop"
+            android:onClick="StopButton"
+            android:text="정지" />
 
     </LinearLayout>
 
@@ -56,7 +66,7 @@
             android:id="@+id/recycler_view"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="15dp"
+            android:padding="30dp"
             android:background="@drawable/list_bg"
             android:visibility="gone" />
 

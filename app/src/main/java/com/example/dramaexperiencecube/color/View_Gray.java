@@ -53,7 +53,7 @@ public class View_Gray extends Activity{
 
             if(fields[count].getName().substring(0,4).equals("gray")){
 //                Log.i("내가 뿌려줄 이름들", fields[count].getName());
-                listStr[cnt] = (String)fields[count].getName();
+                listStr[cnt] = fields[count].getName();
                 cnt++;
 
 

@@ -8,8 +8,10 @@
         android:text="기타"/>
 
     <ScrollView
-        android:layout_width="500dp"
-        android:layout_height="200dp"
+        android:layout_width="680dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="160dp"
+        android:layout_marginBottom="160dp"
         android:padding="10dp"
         android:layout_centerInParent="true">
 

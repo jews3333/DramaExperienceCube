@@ -21,10 +21,10 @@ public class ColorActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_color);
 
-        Red = (Button)findViewById(R.id.btn_Red);
-        Yellow = (Button)findViewById(R.id.btn_Yellow);
-        Blue = (Button)findViewById(R.id.btn_Blue);
-        Gray = (Button)findViewById(R.id.btn_Gray);
+        Red = findViewById(R.id.btn_Red);
+        Yellow = findViewById(R.id.btn_Yellow);
+        Blue = findViewById(R.id.btn_Blue);
+        Gray = findViewById(R.id.btn_Gray);
 
         Red.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -58,7 +58,7 @@ public class ColorActivity extends Activity {
             }
         });
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -67,13 +67,13 @@ public class ColorActivity extends Activity {
             }
         });
 
-        btn_home = (ImageButton)findViewById(R.id.btn_home);
+        btn_home = findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ColorActivity.this, MainActivity.class);
-                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

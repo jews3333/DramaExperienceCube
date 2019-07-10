@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -28,6 +29,8 @@ public class PlayReadingActivity extends Activity {
     Boolean human2 = true;
     Boolean human3 = true;
     Boolean human4 = true;
+
+    ImageButton btn_home, btn_back;
 
     String get_where;
     String get_time;
@@ -83,29 +86,29 @@ public class PlayReadingActivity extends Activity {
 
         View view = new View(PlayReadingActivity.this);
 
-        txt_where = (TextView)findViewById(R.id.txt_where);
-        txt_time = (TextView)findViewById(R.id.txt_time);
-        location = (ImageView)findViewById(R.id.location);
-        location_1 = (ImageView)findViewById(R.id.location_1);
-        location_2 = (ImageView)findViewById(R.id.location_2);
-        location_3 = (ImageView)findViewById(R.id.location_3);
-        location_4 = (ImageView)findViewById(R.id.location_4);
-        location_5 = (ImageView)findViewById(R.id.location_5);
-        location_6 = (ImageView)findViewById(R.id.location_6);
-        location_7 = (ImageView)findViewById(R.id.location_7);
-        location_8 = (ImageView)findViewById(R.id.location_8);
-        location_9 = (ImageView)findViewById(R.id.location_9);
-        human = (ImageView)findViewById(R.id.human);
-        human_1 = (ImageView)findViewById(R.id.human_1);
-        human_2 = (ImageView)findViewById(R.id.human_2);
-        human_3 = (ImageView)findViewById(R.id.human_3);
-        human_4 = (ImageView)findViewById(R.id.human_4);
-        human_5 = (ImageView)findViewById(R.id.human_5);
-        human_6 = (ImageView)findViewById(R.id.human_6);
-        human_7 = (ImageView)findViewById(R.id.human_7);
-        human_8 = (ImageView)findViewById(R.id.human_8);
-        human_9 = (ImageView)findViewById(R.id.human_9);
-        human_10 = (ImageView)findViewById(R.id.human_10);
+        txt_where = findViewById(R.id.txt_where);
+        txt_time = findViewById(R.id.txt_time);
+        location = findViewById(R.id.location);
+        location_1 = findViewById(R.id.location_1);
+        location_2 = findViewById(R.id.location_2);
+        location_3 = findViewById(R.id.location_3);
+        location_4 = findViewById(R.id.location_4);
+        location_5 = findViewById(R.id.location_5);
+        location_6 = findViewById(R.id.location_6);
+        location_7 = findViewById(R.id.location_7);
+        location_8 = findViewById(R.id.location_8);
+        location_9 = findViewById(R.id.location_9);
+        human = findViewById(R.id.human);
+        human_1 = findViewById(R.id.human_1);
+        human_2 = findViewById(R.id.human_2);
+        human_3 = findViewById(R.id.human_3);
+        human_4 = findViewById(R.id.human_4);
+        human_5 = findViewById(R.id.human_5);
+        human_6 = findViewById(R.id.human_6);
+        human_7 = findViewById(R.id.human_7);
+        human_8 = findViewById(R.id.human_8);
+        human_9 = findViewById(R.id.human_9);
+        human_10 = findViewById(R.id.human_10);
         ArrayList<String> humans = get_humans;
         try{
             String[] str_location = {"학교", "공원", "버스 정류소", "교실", "집", "운동장", "PC방", "도서관", "창원 시내"};
@@ -152,7 +155,7 @@ public class PlayReadingActivity extends Activity {
 
             for (int j = 0; j < humans.size(); j++) {
                 for(int i = 0; i < str_human.length; i++) {
-                    if(humans.get(j).toString().equals(str_human[i])){
+                    if(humans.get(j).equals(str_human[i])){
                         if (i == 0) {
                             human_1.setVisibility(View.VISIBLE);
                         }
@@ -192,6 +195,26 @@ public class PlayReadingActivity extends Activity {
         }catch (Exception e){
             System.out.println(e);
         }
+
+        btn_back = findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        btn_home = findViewById(R.id.btn_home);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(PlayReadingActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
 
     }
 

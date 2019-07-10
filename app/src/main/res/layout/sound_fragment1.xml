@@ -8,8 +8,10 @@
         android:text="감정, 배경"/>
 
     <ScrollView
-        android:layout_width="500dp"
-        android:layout_height="200dp"
+        android:layout_width="680dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="200dp"
+        android:layout_marginBottom="200dp"
         android:padding="10dp"
         android:layout_centerInParent="true">
 
@@ -62,6 +64,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal">
+
                 <Button
                     style="@style/soundList"
                     android:onClick="onSound"

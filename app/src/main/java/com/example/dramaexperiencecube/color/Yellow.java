@@ -40,12 +40,12 @@ public class Yellow extends Activity {
         view_Yellow = new View_Yellow(this, getPackageName());
 
         //뷰 리스트 추가
-        btn_list = (ImageButton) findViewById(R.id.btn_list);
+        btn_list = findViewById(R.id.btn_list);
         mRecyclerView = findViewById(R.id.recycler_view);
         mRecyclerView.setHasFixedSize(true);
         mLayoutManager = new LinearLayoutManager(this);
         mRecyclerView.setLayoutManager(mLayoutManager);
-        yellowAdapter = new Adapter_Yellow(view_Yellow.getViewList());
+        yellowAdapter = new Adapter_Yellow(View_Yellow.getViewList());
         mRecyclerView.setAdapter(yellowAdapter);
 
 
@@ -61,9 +61,9 @@ public class Yellow extends Activity {
 
 
         //레이아웃 위젯 findViewById
-        videoView = (VideoView) findViewById(R.id.view);
-        btnStart = (Button) findViewById(R.id.btnStart);
-        btnStop = (Button) findViewById(R.id.btnStop);
+        videoView = findViewById(R.id.view);
+        btnStart = findViewById(R.id.btnStart);
+        btnStop = findViewById(R.id.btnStop);
 
         //미디어컨트롤러 추가하는 부분
         controller = new MediaController(Yellow.this);
@@ -98,7 +98,7 @@ public class Yellow extends Activity {
             }
         });
 
-        btn_back = (ImageButton)findViewById(R.id.btn_back);
+        btn_back = findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -107,13 +107,13 @@ public class Yellow extends Activity {
             }
         });
 
-        btn_home = (ImageButton)findViewById(R.id.btn_home);
+        btn_home = findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(Yellow.this, MainActivity.class);
-                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

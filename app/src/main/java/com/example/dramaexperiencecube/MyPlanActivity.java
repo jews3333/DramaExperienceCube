@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.TextView;
@@ -24,6 +25,7 @@ import java.util.ArrayList;
 public class MyPlanActivity extends AppCompatActivity {
     boolean[] humanSelected = new boolean[10];
     Drama drama;
+    ImageButton btn_home, btn_back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -32,60 +34,60 @@ public class MyPlanActivity extends AppCompatActivity {
 
         drama = new Drama();
 
-        final EditText edittext = (EditText) findViewById(R.id.edit_txt);
+        final EditText edittext = findViewById(R.id.edit_txt);
 
         //장면
-        final LinearLayout layout_where = (LinearLayout) findViewById(R.id.layout_where);
-        final Button btn_where = (Button) findViewById(R.id.btn_where);
-        final Button btn_where1 = (Button) findViewById(R.id.btn_where1);
-        final Button btn_where2 = (Button) findViewById(R.id.btn_where2);
-        final Button btn_where3 = (Button) findViewById(R.id.btn_where3);
+        final LinearLayout layout_where = findViewById(R.id.layout_where);
+        final Button btn_where = findViewById(R.id.btn_where);
+        final Button btn_where1 = findViewById(R.id.btn_where1);
+        final Button btn_where2 = findViewById(R.id.btn_where2);
+        final Button btn_where3 = findViewById(R.id.btn_where3);
 
         //때
-        final LinearLayout layout_time = (LinearLayout) findViewById(R.id.layout_time);
-        final Button btn_time = (Button) findViewById(R.id.btn_time);
-        final Button btn_time1 = (Button) findViewById(R.id.btn_time1);
-        final Button btn_time2 = (Button) findViewById(R.id.btn_time2);
-        final Button btn_time3 = (Button) findViewById(R.id.btn_time3);
-        final Button btn_time4 = (Button) findViewById(R.id.btn_time4);
-        final Button btn_time5 = (Button) findViewById(R.id.btn_time5);
+        final LinearLayout layout_time = findViewById(R.id.layout_time);
+        final Button btn_time = findViewById(R.id.btn_time);
+        final Button btn_time1 = findViewById(R.id.btn_time1);
+        final Button btn_time2 = findViewById(R.id.btn_time2);
+        final Button btn_time3 = findViewById(R.id.btn_time3);
+        final Button btn_time4 = findViewById(R.id.btn_time4);
+        final Button btn_time5 = findViewById(R.id.btn_time5);
 
         //장소
-        final LinearLayout layout_location = (LinearLayout) findViewById(R.id.layout_location);
-        final Button btn_location = (Button) findViewById(R.id.btn_location);
-        final Button btn_location1 = (Button) findViewById(R.id.btn_location1);
-        final Button btn_location2 = (Button) findViewById(R.id.btn_location2);
-        final Button btn_location3 = (Button) findViewById(R.id.btn_location3);
-        final Button btn_location4 = (Button) findViewById(R.id.btn_location4);
-        final Button btn_location5 = (Button) findViewById(R.id.btn_location5);
-        final Button btn_location6 = (Button) findViewById(R.id.btn_location6);
-        final Button btn_location7 = (Button) findViewById(R.id.btn_location7);
-        final Button btn_location8 = (Button) findViewById(R.id.btn_location8);
-        final Button btn_location9 = (Button) findViewById(R.id.btn_location9);
+        final LinearLayout layout_location = findViewById(R.id.layout_location);
+        final Button btn_location = findViewById(R.id.btn_location);
+        final Button btn_location1 = findViewById(R.id.btn_location1);
+        final Button btn_location2 = findViewById(R.id.btn_location2);
+        final Button btn_location3 = findViewById(R.id.btn_location3);
+        final Button btn_location4 = findViewById(R.id.btn_location4);
+        final Button btn_location5 = findViewById(R.id.btn_location5);
+        final Button btn_location6 = findViewById(R.id.btn_location6);
+        final Button btn_location7 = findViewById(R.id.btn_location7);
+        final Button btn_location8 = findViewById(R.id.btn_location8);
+        final Button btn_location9 = findViewById(R.id.btn_location9);
 
         //인물
-        final LinearLayout layout_human = (LinearLayout) findViewById(R.id.layout_human);
-        final Button btn_human = (Button) findViewById(R.id.btn_human);
-        final Button btn_human1 = (Button) findViewById(R.id.btn_human1);
-        final Button btn_human2 = (Button) findViewById(R.id.btn_human2);
-        final Button btn_human3 = (Button) findViewById(R.id.btn_human3);
-        final Button btn_human4 = (Button) findViewById(R.id.btn_human4);
-        final Button btn_human5 = (Button) findViewById(R.id.btn_human5);
-        final Button btn_human6 = (Button) findViewById(R.id.btn_human6);
-        final Button btn_human7 = (Button) findViewById(R.id.btn_human7);
-        final Button btn_human8 = (Button) findViewById(R.id.btn_human8);
-        final Button btn_human9 = (Button) findViewById(R.id.btn_human9);
-        final Button btn_human10 = (Button) findViewById(R.id.btn_human10);
+        final LinearLayout layout_human = findViewById(R.id.layout_human);
+        final Button btn_human = findViewById(R.id.btn_human);
+        final Button btn_human1 = findViewById(R.id.btn_human1);
+        final Button btn_human2 = findViewById(R.id.btn_human2);
+        final Button btn_human3 = findViewById(R.id.btn_human3);
+        final Button btn_human4 = findViewById(R.id.btn_human4);
+        final Button btn_human5 = findViewById(R.id.btn_human5);
+        final Button btn_human6 = findViewById(R.id.btn_human6);
+        final Button btn_human7 = findViewById(R.id.btn_human7);
+        final Button btn_human8 = findViewById(R.id.btn_human8);
+        final Button btn_human9 = findViewById(R.id.btn_human9);
+        final Button btn_human10 = findViewById(R.id.btn_human10);
 
         //만들기
-        final LinearLayout layout_make = (LinearLayout) findViewById(R.id.layout_make);
-        final TextView txt_where = (TextView) findViewById(R.id.txt_where);
-        final TextView txt_time = (TextView) findViewById(R.id.txt_time);
-        final TextView txt_location = (TextView) findViewById(R.id.txt_location);
-        final TextView txt_human = (TextView) findViewById(R.id.txt_human);
-        final Button btn_reading = (Button) findViewById(R.id.btn_reading);
-        final Button btn_make = (Button) findViewById(R.id.btn_make);
-        final ListView list_scripts = (ListView)findViewById(R.id.list_scripts);
+        final LinearLayout layout_make = findViewById(R.id.layout_make);
+        final TextView txt_where = findViewById(R.id.txt_where);
+        final TextView txt_time = findViewById(R.id.txt_time);
+        final TextView txt_location = findViewById(R.id.txt_location);
+        final TextView txt_human = findViewById(R.id.txt_human);
+        final Button btn_reading = findViewById(R.id.btn_reading);
+        final Button btn_make = findViewById(R.id.btn_make);
+        final ListView list_scripts = findViewById(R.id.list_scripts);
 
         //장면
         Button[] whereBtns = new Button[]{btn_where1, btn_where2, btn_where3};
@@ -95,19 +97,19 @@ public class MyPlanActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     drama.setWhere(btn.getText().toString());
 
-                    layout_where.setVisibility(view.GONE);
-                    btn_where1.setVisibility(view.GONE);
-                    btn_where2.setVisibility(view.GONE);
-                    btn_where3.setVisibility(view.GONE);
-                    btn_where.setVisibility(view.GONE);
+                    layout_where.setVisibility(View.GONE);
+                    btn_where1.setVisibility(View.GONE);
+                    btn_where2.setVisibility(View.GONE);
+                    btn_where3.setVisibility(View.GONE);
+                    btn_where.setVisibility(View.GONE);
 
-                    layout_time.setVisibility(view.VISIBLE);
-                    btn_time1.setVisibility(view.VISIBLE);
-                    btn_time2.setVisibility(view.VISIBLE);
-                    btn_time3.setVisibility(view.VISIBLE);
-                    btn_time4.setVisibility(view.VISIBLE);
-                    btn_time5.setVisibility(view.VISIBLE);
-                    btn_time.setVisibility(view.VISIBLE);
+                    layout_time.setVisibility(View.VISIBLE);
+                    btn_time1.setVisibility(View.VISIBLE);
+                    btn_time2.setVisibility(View.VISIBLE);
+                    btn_time3.setVisibility(View.VISIBLE);
+                    btn_time4.setVisibility(View.VISIBLE);
+                    btn_time5.setVisibility(View.VISIBLE);
+                    btn_time.setVisibility(View.VISIBLE);
                     edittext.setText("");
                 }
             });
@@ -118,19 +120,19 @@ public class MyPlanActivity extends AppCompatActivity {
             public void onClick(View view) {
                 drama.setWhere(edittext.getText().toString());
 
-                layout_where.setVisibility(view.GONE);
-                btn_where1.setVisibility(view.GONE);
-                btn_where2.setVisibility(view.GONE);
-                btn_where3.setVisibility(view.GONE);
-                btn_where.setVisibility(view.GONE);
+                layout_where.setVisibility(View.GONE);
+                btn_where1.setVisibility(View.GONE);
+                btn_where2.setVisibility(View.GONE);
+                btn_where3.setVisibility(View.GONE);
+                btn_where.setVisibility(View.GONE);
 
-                layout_time.setVisibility(view.VISIBLE);
-                btn_time1.setVisibility(view.VISIBLE);
-                btn_time2.setVisibility(view.VISIBLE);
-                btn_time3.setVisibility(view.VISIBLE);
-                btn_time4.setVisibility(view.VISIBLE);
-                btn_time5.setVisibility(view.VISIBLE);
-                btn_time.setVisibility(view.VISIBLE);
+                layout_time.setVisibility(View.VISIBLE);
+                btn_time1.setVisibility(View.VISIBLE);
+                btn_time2.setVisibility(View.VISIBLE);
+                btn_time3.setVisibility(View.VISIBLE);
+                btn_time4.setVisibility(View.VISIBLE);
+                btn_time5.setVisibility(View.VISIBLE);
+                btn_time.setVisibility(View.VISIBLE);
                 edittext.setText("");
             }
         });
@@ -144,25 +146,25 @@ public class MyPlanActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     drama.setTime(btn.getText().toString());
 
-                    layout_time.setVisibility(view.GONE);
-                    btn_time1.setVisibility(view.GONE);
-                    btn_time2.setVisibility(view.GONE);
-                    btn_time3.setVisibility(view.GONE);
-                    btn_time4.setVisibility(view.GONE);
-                    btn_time5.setVisibility(view.GONE);
-                    btn_time.setVisibility(view.GONE);
+                    layout_time.setVisibility(View.GONE);
+                    btn_time1.setVisibility(View.GONE);
+                    btn_time2.setVisibility(View.GONE);
+                    btn_time3.setVisibility(View.GONE);
+                    btn_time4.setVisibility(View.GONE);
+                    btn_time5.setVisibility(View.GONE);
+                    btn_time.setVisibility(View.GONE);
 
-                    layout_location.setVisibility(view.VISIBLE);
-                    btn_location1.setVisibility(view.VISIBLE);
-                    btn_location2.setVisibility(view.VISIBLE);
-                    btn_location3.setVisibility(view.VISIBLE);
-                    btn_location4.setVisibility(view.VISIBLE);
-                    btn_location5.setVisibility(view.VISIBLE);
-                    btn_location6.setVisibility(view.VISIBLE);
-                    btn_location7.setVisibility(view.VISIBLE);
-                    btn_location8.setVisibility(view.VISIBLE);
-                    btn_location9.setVisibility(view.VISIBLE);
-                    btn_location.setVisibility(view.VISIBLE);
+                    layout_location.setVisibility(View.VISIBLE);
+                    btn_location1.setVisibility(View.VISIBLE);
+                    btn_location2.setVisibility(View.VISIBLE);
+                    btn_location3.setVisibility(View.VISIBLE);
+                    btn_location4.setVisibility(View.VISIBLE);
+                    btn_location5.setVisibility(View.VISIBLE);
+                    btn_location6.setVisibility(View.VISIBLE);
+                    btn_location7.setVisibility(View.VISIBLE);
+                    btn_location8.setVisibility(View.VISIBLE);
+                    btn_location9.setVisibility(View.VISIBLE);
+                    btn_location.setVisibility(View.VISIBLE);
                     edittext.setText("");
                 }
             });
@@ -173,25 +175,25 @@ public class MyPlanActivity extends AppCompatActivity {
             public void onClick(View view) {
                 drama.setTime(edittext.getText().toString());
 
-                layout_time.setVisibility(view.GONE);
-                btn_time1.setVisibility(view.GONE);
-                btn_time2.setVisibility(view.GONE);
-                btn_time3.setVisibility(view.GONE);
-                btn_time4.setVisibility(view.GONE);
-                btn_time5.setVisibility(view.GONE);
-                btn_time.setVisibility(view.GONE);
+                layout_time.setVisibility(View.GONE);
+                btn_time1.setVisibility(View.GONE);
+                btn_time2.setVisibility(View.GONE);
+                btn_time3.setVisibility(View.GONE);
+                btn_time4.setVisibility(View.GONE);
+                btn_time5.setVisibility(View.GONE);
+                btn_time.setVisibility(View.GONE);
 
-                layout_location.setVisibility(view.VISIBLE);
-                btn_location1.setVisibility(view.VISIBLE);
-                btn_location2.setVisibility(view.VISIBLE);
-                btn_location3.setVisibility(view.VISIBLE);
-                btn_location4.setVisibility(view.VISIBLE);
-                btn_location5.setVisibility(view.VISIBLE);
-                btn_location6.setVisibility(view.VISIBLE);
-                btn_location7.setVisibility(view.VISIBLE);
-                btn_location8.setVisibility(view.VISIBLE);
-                btn_location9.setVisibility(view.VISIBLE);
-                btn_location.setVisibility(view.VISIBLE);
+                layout_location.setVisibility(View.VISIBLE);
+                btn_location1.setVisibility(View.VISIBLE);
+                btn_location2.setVisibility(View.VISIBLE);
+                btn_location3.setVisibility(View.VISIBLE);
+                btn_location4.setVisibility(View.VISIBLE);
+                btn_location5.setVisibility(View.VISIBLE);
+                btn_location6.setVisibility(View.VISIBLE);
+                btn_location7.setVisibility(View.VISIBLE);
+                btn_location8.setVisibility(View.VISIBLE);
+                btn_location9.setVisibility(View.VISIBLE);
+                btn_location.setVisibility(View.VISIBLE);
                 edittext.setText("");
             }
         });
@@ -205,30 +207,30 @@ public class MyPlanActivity extends AppCompatActivity {
                 public void onClick(View view) {
                     drama.setLocation(btn.getText().toString());
 
-                    layout_location.setVisibility(view.GONE);
-                    btn_location1.setVisibility(view.GONE);
-                    btn_location2.setVisibility(view.GONE);
-                    btn_location3.setVisibility(view.GONE);
-                    btn_location4.setVisibility(view.GONE);
-                    btn_location5.setVisibility(view.GONE);
-                    btn_location6.setVisibility(view.GONE);
-                    btn_location7.setVisibility(view.GONE);
-                    btn_location8.setVisibility(view.GONE);
-                    btn_location9.setVisibility(view.GONE);
-                    btn_location.setVisibility(view.GONE);
+                    layout_location.setVisibility(View.GONE);
+                    btn_location1.setVisibility(View.GONE);
+                    btn_location2.setVisibility(View.GONE);
+                    btn_location3.setVisibility(View.GONE);
+                    btn_location4.setVisibility(View.GONE);
+                    btn_location5.setVisibility(View.GONE);
+                    btn_location6.setVisibility(View.GONE);
+                    btn_location7.setVisibility(View.GONE);
+                    btn_location8.setVisibility(View.GONE);
+                    btn_location9.setVisibility(View.GONE);
+                    btn_location.setVisibility(View.GONE);
 
-                    layout_human.setVisibility(view.VISIBLE);
-                    btn_human.setVisibility(view.VISIBLE);
-                    btn_human1.setVisibility(view.VISIBLE);
-                    btn_human2.setVisibility(view.VISIBLE);
-                    btn_human3.setVisibility(view.VISIBLE);
-                    btn_human4.setVisibility(view.VISIBLE);
-                    btn_human5.setVisibility(view.VISIBLE);
-                    btn_human6.setVisibility(view.VISIBLE);
-                    btn_human7.setVisibility(view.VISIBLE);
-                    btn_human8.setVisibility(view.VISIBLE);
-                    btn_human9.setVisibility(view.VISIBLE);
-                    btn_human10.setVisibility(view.VISIBLE);
+                    layout_human.setVisibility(View.VISIBLE);
+                    btn_human.setVisibility(View.VISIBLE);
+                    btn_human1.setVisibility(View.VISIBLE);
+                    btn_human2.setVisibility(View.VISIBLE);
+                    btn_human3.setVisibility(View.VISIBLE);
+                    btn_human4.setVisibility(View.VISIBLE);
+                    btn_human5.setVisibility(View.VISIBLE);
+                    btn_human6.setVisibility(View.VISIBLE);
+                    btn_human7.setVisibility(View.VISIBLE);
+                    btn_human8.setVisibility(View.VISIBLE);
+                    btn_human9.setVisibility(View.VISIBLE);
+                    btn_human10.setVisibility(View.VISIBLE);
 
                     edittext.setText("");
                 }
@@ -240,30 +242,30 @@ public class MyPlanActivity extends AppCompatActivity {
             public void onClick(View view) {
                 drama.setLocation(edittext.getText().toString());
 
-                layout_location.setVisibility(view.GONE);
-                btn_location1.setVisibility(view.GONE);
-                btn_location2.setVisibility(view.GONE);
-                btn_location3.setVisibility(view.GONE);
-                btn_location4.setVisibility(view.GONE);
-                btn_location5.setVisibility(view.GONE);
-                btn_location6.setVisibility(view.GONE);
-                btn_location7.setVisibility(view.GONE);
-                btn_location8.setVisibility(view.GONE);
-                btn_location9.setVisibility(view.GONE);
-                btn_location.setVisibility(view.GONE);
+                layout_location.setVisibility(View.GONE);
+                btn_location1.setVisibility(View.GONE);
+                btn_location2.setVisibility(View.GONE);
+                btn_location3.setVisibility(View.GONE);
+                btn_location4.setVisibility(View.GONE);
+                btn_location5.setVisibility(View.GONE);
+                btn_location6.setVisibility(View.GONE);
+                btn_location7.setVisibility(View.GONE);
+                btn_location8.setVisibility(View.GONE);
+                btn_location9.setVisibility(View.GONE);
+                btn_location.setVisibility(View.GONE);
 
-                layout_human.setVisibility(view.VISIBLE);
-                btn_human.setVisibility(view.VISIBLE);
-                btn_human1.setVisibility(view.VISIBLE);
-                btn_human2.setVisibility(view.VISIBLE);
-                btn_human3.setVisibility(view.VISIBLE);
-                btn_human4.setVisibility(view.VISIBLE);
-                btn_human5.setVisibility(view.VISIBLE);
-                btn_human6.setVisibility(view.VISIBLE);
-                btn_human7.setVisibility(view.VISIBLE);
-                btn_human8.setVisibility(view.VISIBLE);
-                btn_human9.setVisibility(view.VISIBLE);
-                btn_human10.setVisibility(view.VISIBLE);
+                layout_human.setVisibility(View.VISIBLE);
+                btn_human.setVisibility(View.VISIBLE);
+                btn_human1.setVisibility(View.VISIBLE);
+                btn_human2.setVisibility(View.VISIBLE);
+                btn_human3.setVisibility(View.VISIBLE);
+                btn_human4.setVisibility(View.VISIBLE);
+                btn_human5.setVisibility(View.VISIBLE);
+                btn_human6.setVisibility(View.VISIBLE);
+                btn_human7.setVisibility(View.VISIBLE);
+                btn_human8.setVisibility(View.VISIBLE);
+                btn_human9.setVisibility(View.VISIBLE);
+                btn_human10.setVisibility(View.VISIBLE);
 
                 edittext.setText("");
             }
@@ -307,28 +309,28 @@ public class MyPlanActivity extends AppCompatActivity {
                     drama.setHumans(humans);
                 }
 
-                layout_human.setVisibility(view.GONE);
-                btn_human.setVisibility(view.GONE);
-                btn_human1.setVisibility(view.GONE);
-                btn_human2.setVisibility(view.GONE);
-                btn_human3.setVisibility(view.GONE);
-                btn_human4.setVisibility(view.GONE);
-                btn_human5.setVisibility(view.GONE);
-                btn_human6.setVisibility(view.GONE);
-                btn_human7.setVisibility(view.GONE);
-                btn_human8.setVisibility(view.GONE);
-                btn_human9.setVisibility(view.GONE);
-                btn_human10.setVisibility(view.GONE);
-                edittext.setVisibility(view.GONE);
+                layout_human.setVisibility(View.GONE);
+                btn_human.setVisibility(View.GONE);
+                btn_human1.setVisibility(View.GONE);
+                btn_human2.setVisibility(View.GONE);
+                btn_human3.setVisibility(View.GONE);
+                btn_human4.setVisibility(View.GONE);
+                btn_human5.setVisibility(View.GONE);
+                btn_human6.setVisibility(View.GONE);
+                btn_human7.setVisibility(View.GONE);
+                btn_human8.setVisibility(View.GONE);
+                btn_human9.setVisibility(View.GONE);
+                btn_human10.setVisibility(View.GONE);
+                edittext.setVisibility(View.GONE);
 
-                layout_make.setVisibility(view.VISIBLE);
-                txt_where.setVisibility(view.VISIBLE);
-                txt_time.setVisibility(view.VISIBLE);
-                txt_location.setVisibility(view.VISIBLE);
-                txt_human.setVisibility(view.VISIBLE);
-                btn_reading.setVisibility(view.VISIBLE);
-                btn_make.setVisibility(view.VISIBLE);
-                list_scripts.setVisibility(view.VISIBLE);
+                layout_make.setVisibility(View.VISIBLE);
+                txt_where.setVisibility(View.VISIBLE);
+                txt_time.setVisibility(View.VISIBLE);
+                txt_location.setVisibility(View.VISIBLE);
+                txt_human.setVisibility(View.VISIBLE);
+                btn_reading.setVisibility(View.VISIBLE);
+                btn_make.setVisibility(View.VISIBLE);
+                list_scripts.setVisibility(View.VISIBLE);
 
                 txt_where.setText(drama.getWhere());
                 txt_time.setText(drama.getTime());
@@ -372,6 +374,26 @@ public class MyPlanActivity extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        btn_back = findViewById(R.id.btn_back);
+
+        btn_back.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                onBackPressed();
+            }
+        });
+
+        btn_home = findViewById(R.id.btn_home);
+
+        btn_home.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(MyPlanActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                startActivity(intent);
+            }
+        });
     }
 
     final ArrayList<String> arraylist = new ArrayList<String>();
@@ -385,7 +407,7 @@ public class MyPlanActivity extends AppCompatActivity {
                 return item;
             }
         };
-        final ListView list = (ListView)findViewById(R.id.list_scripts);
+        final ListView list = findViewById(R.id.list_scripts);
         list.setAdapter(adapter);
     }
 }
