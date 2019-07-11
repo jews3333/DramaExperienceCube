@@ -51,6 +51,24 @@
                     android:text="학예회를 준비하는 데 하고싶은 역할이 겹치는 상황"
                     android:visibility="visible" />
 
+                <Button
+                    android:id="@+id/btn_where4"
+                    style="@style/planListBtn"
+                    android:text="내가 좋아하는 책을 다른 사람이 찢은 상황"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_where5"
+                    style="@style/planListBtn"
+                    android:text="내 잘못이 아닌데 억울하게 혼난 상황"
+                    android:visibility="visible" />
+
+                <Button
+                    android:id="@+id/btn_where6"
+                    style="@style/planListBtn"
+                    android:text="친구들과 시내에 놀러가기로 약속하는 상황"
+                    android:visibility="visible" />
+
             </LinearLayout>
 
             <!--언제-->
@@ -247,19 +265,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="#fff"
+                        android:layout_marginRight="10dp"
                         android:text="장면 :"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_where"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="장면"
-                        android:textSize="18sp"
-                        android:textColor="#fff"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
                 <!--언제-->
@@ -273,19 +291,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="#fff"
+                        android:layout_marginRight="10dp"
                         android:text="언제 :"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_time"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="언제"
-                        android:textSize="18sp"
-                        android:textColor="#fff"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
                 <!--어디서-->
@@ -299,19 +317,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="#fff"
+                        android:layout_marginRight="10dp"
                         android:text="어디서 :"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="어디서"
-                        android:textSize="18sp"
-                        android:textColor="#fff"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
 
@@ -325,19 +343,19 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:textSize="18sp"
-                        android:textColor="#fff"
+                        android:layout_marginRight="10dp"
                         android:text="인물 :"
-                        android:textStyle="bold"
-                        android:layout_marginRight="10dp"/>
+                        android:textColor="#fff"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/txt_human"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:text="인물"
-                        android:textSize="18sp"
-                        android:textColor="#fff" />
+                        android:textColor="#fff"
+                        android:textSize="22sp" />
 
                 </LinearLayout>
 
@@ -345,7 +363,7 @@
                     android:id="@+id/list_scripts"
                     android:layout_width="match_parent"
                     android:layout_height="200dp"
-                    android:layout_marginTop="15dp"
+                    android:layout_marginTop="7dp"
                     android:visibility="gone" />
             </LinearLayout>
         </LinearLayout>

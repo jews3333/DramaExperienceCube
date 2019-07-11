@@ -2,10 +2,8 @@ package com.example.dramaexperiencecube;
 
 import android.content.Intent;
 import android.graphics.Color;
-import android.graphics.Typeface;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
-import android.util.TypedValue;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
@@ -42,6 +40,9 @@ public class MyPlanActivity extends AppCompatActivity {
         final Button btn_where1 = (Button) findViewById(R.id.btn_where1);
         final Button btn_where2 = (Button) findViewById(R.id.btn_where2);
         final Button btn_where3 = (Button) findViewById(R.id.btn_where3);
+        final Button btn_where4 = (Button) findViewById(R.id.btn_where4);
+        final Button btn_where5 = (Button) findViewById(R.id.btn_where5);
+        final Button btn_where6 = (Button) findViewById(R.id.btn_where6);
 
         //때
         final LinearLayout layout_time = (LinearLayout) findViewById(R.id.layout_time);
@@ -90,7 +91,7 @@ public class MyPlanActivity extends AppCompatActivity {
         final ListView list_scripts = (ListView)findViewById(R.id.list_scripts);
 
         //장면
-        Button[] whereBtns = new Button[]{btn_where1, btn_where2, btn_where3};
+        Button[] whereBtns = new Button[]{btn_where1, btn_where2, btn_where3, btn_where4, btn_where5, btn_where6};
         for (final Button btn : whereBtns) {
             btn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -101,6 +102,9 @@ public class MyPlanActivity extends AppCompatActivity {
                     btn_where1.setVisibility(view.GONE);
                     btn_where2.setVisibility(view.GONE);
                     btn_where3.setVisibility(view.GONE);
+                    btn_where4.setVisibility(view.GONE);
+                    btn_where5.setVisibility(view.GONE);
+                    btn_where6.setVisibility(view.GONE);
                     btn_where.setVisibility(view.GONE);
 
                     layout_time.setVisibility(view.VISIBLE);

@@ -33,6 +33,7 @@ public class YesoryesActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yesoryes);
+        final Handler handler = new Handler();
 
         final String[] str = {"웃다", "울다", "걷다", "절하다", "기다", "랩하다"};
         int r = (int) (Math.random() * 6);
@@ -43,36 +44,6 @@ public class YesoryesActivity extends AppCompatActivity {
         btn_Level1 = (Button) findViewById(R.id.btn_Level1);
         btn_Level2 = (Button) findViewById(R.id.btn_Level2);
         btn_All_Level = (Button) findViewById(R.id.btn_All_Level);
-
-        /*btn_Level1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int r = (int) (Math.random() * 6);
-
-                if (txt_Level2.getText().equals(str[r])) {
-                    btn_Level1.performClick();
-                } else {
-                    txt_Level1.setText(str[r]);
-                }
-
-            }
-        });*/
-
-        /*
-        btn_Level2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                int r = (int) (Math.random() * 6);
-
-                if (txt_Level1.getText().equals(str[r])) {
-                    btn_Level2.performClick();
-                } else {
-                    txt_Level2.setText(str[r]);
-                }
-
-            }
-        });*/
-
 
 
         btn_Level1.setOnTouchListener(onBtnTouchListener1);
@@ -219,6 +190,11 @@ public class YesoryesActivity extends AppCompatActivity {
             super.run();
             while (_isBtnDown3) {
                 RejectTxt1();
+                try {
+                    Thread.sleep(100);
+                } catch (Exception e) {
+                    e.printStackTrace();
+                }
                 RejectTxt2();
                 try {
                     Thread.sleep(200);
@@ -229,25 +205,47 @@ public class YesoryesActivity extends AppCompatActivity {
         }
     }
 
+
+
     public void RejectTxt1() {
         final String[] str = {"웃거나", "울거나", "걷거나", "절하거나", "기거나", "랩하거나"};
-        int r = (int) (Math.random() * 6);
+        final int r = (int) (Math.random() * 6);
 
         if (Reject(1, (String)txt_Level2.getText(), r)) {
             RejectTxt1();
         } else {
-            txt_Level1.setText(str[r]);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    runOnUiThread(new Runnable(){
+                        @Override
+                        public void run() {
+                            txt_Level1.setText(str[r]);
+                        }
+                    });
+                }
+            }).start();
         }
     }
 
     public void RejectTxt2() {
         final String[] str = {"웃는", "우는", "걷는", "절하는", "기는", "랩하는"};
-        int r = (int) (Math.random() * 6);
+        final int r = (int) (Math.random() * 6);
 
         if (Reject(2, (String)txt_Level1.getText(), r)) {
             RejectTxt2();
         } else {
-            txt_Level2.setText(str[r]);
+            new Thread(new Runnable() {
+                @Override
+                public void run() {
+                    runOnUiThread(new Runnable(){
+                        @Override
+                        public void run() {
+                            txt_Level2.setText(str[r]);
+                        }
+                    });
+                }
+            }).start();
         }
     }
 
@@ -271,5 +269,7 @@ public class YesoryesActivity extends AppCompatActivity {
         }
         return true;
     }
+
+
 }
 
