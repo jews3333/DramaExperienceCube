@@ -39,9 +39,9 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_marginLeft="200dp"
-        android:layout_marginRight="200dp"
         android:layout_marginTop="200dp"
-        android:layout_marginBottom="400dp"
+        android:layout_marginRight="200dp"
+        android:layout_marginBottom="200dp"
         android:background="@drawable/reading_bg2"
         android:elevation="2dp"
         android:padding="15dp">
@@ -155,100 +155,100 @@
         <ImageView
             android:id="@+id/human_1"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_1"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_1"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_2"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_2"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_2"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_3"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_3"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_4"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_4"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_4"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_5"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_5"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_5"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_6"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_6"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_6"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_7"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_7"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_7"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_8"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_8"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_8"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_9"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_9"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_9"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human_10"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human_10"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human_10"
             android:visibility="gone" />
 
         <ImageView
             android:id="@+id/human"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="200dp"
             android:layout_weight="1"
-            android:src="@drawable/obj_human"
             android:scaleType="fitEnd"
+            android:src="@drawable/obj_human"
             android:visibility="gone" />
     </LinearLayout>
 
