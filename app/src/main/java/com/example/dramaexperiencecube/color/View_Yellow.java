@@ -52,7 +52,7 @@ public class View_Yellow extends Activity{
 
             if(fields[count].getName().substring(0,5).equals("yello")){
 //                Log.i("내가 뿌려줄 이름들", fields[count].getName());
-                listStr[cnt] = fields[count].getName();
+                listStr[cnt] = (String)fields[count].getName();
                 cnt++;
 
 

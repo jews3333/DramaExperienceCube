@@ -18,7 +18,7 @@ public class TraningActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_traning);
 
-        btn_effect = findViewById(R.id.btn_effect);
+        btn_effect = (Button)findViewById(R.id.btn_effect);
         btn_effect.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -28,7 +28,7 @@ public class TraningActivity extends AppCompatActivity {
         });
 
 
-        btn_MyPlan = findViewById(R.id.btn_MyPlan);
+        btn_MyPlan = (Button)findViewById(R.id.btn_MyPlan);
         btn_MyPlan.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -37,7 +37,7 @@ public class TraningActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,12 +45,12 @@ public class TraningActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(TraningActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

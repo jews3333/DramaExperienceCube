@@ -13,7 +13,7 @@ public class Adapter_Yellow extends RecyclerView.Adapter<RecyclerView.ViewHolder
 
     private OnClickItemListener onClickItemListener;
     public interface OnClickItemListener {
-        void onClickItem(View item);
+        public void onClickItem(View item);
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {
@@ -45,7 +45,7 @@ public class Adapter_Yellow extends RecyclerView.Adapter<RecyclerView.ViewHolder
         myViewHolder.item.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                    Yellow.View_video(myViewHolder.item);
+                Yellow.View_video(myViewHolder.item);
 //                onClickItemListener.onClickItem(myViewHolder.item);
             }
         });

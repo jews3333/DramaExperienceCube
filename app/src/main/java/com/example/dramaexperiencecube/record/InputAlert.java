@@ -12,7 +12,7 @@ public class InputAlert {
 
     private OnPressOkListener onPressOkListener;
     public interface OnPressOkListener {
-        void onPressOk(String value);
+        public void onPressOk(String value);
     }
 
     public InputAlert(Context context, String title) {

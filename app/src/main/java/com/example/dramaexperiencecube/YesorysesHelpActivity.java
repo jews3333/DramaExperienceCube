@@ -26,17 +26,17 @@ public class YesorysesHelpActivity extends AppCompatActivity {
 
         String VIDEO_URL = "android.resource://" + getPackageName() + "/" + R.raw.dramabyyes;
 
-        media = findViewById(R.id.media);
+        media = (VideoView)findViewById(R.id.media);
         media.setVideoPath(VIDEO_URL);
 
-        media_wrap = findViewById(R.id.media_wrap);
+        media_wrap = (LinearLayout)findViewById(R.id.media_wrap);
 
         MediaController mediaController = new MediaController(this);
         mediaController.setAnchorView(media);
 
         media.setMediaController(mediaController);
 
-        btn_media = findViewById(R.id.btn_media);
+        btn_media = (Button)findViewById(R.id.btn_media);
         btn_media.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -45,7 +45,7 @@ public class YesorysesHelpActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -59,14 +59,14 @@ public class YesorysesHelpActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 media.pause();
                 media.seekTo(0);
                 Intent intent = new Intent(YesorysesHelpActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

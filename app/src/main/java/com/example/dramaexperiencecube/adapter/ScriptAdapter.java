@@ -27,7 +27,7 @@ public class ScriptAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder>
     private int selectedPos = RecyclerView.NO_POSITION;
 
     public interface OnClickItemListener {
-        void onClickItem(View item, int position);
+        public void onClickItem(View item, int position);
     }
 
     public static class MyViewHolder extends RecyclerView.ViewHolder {

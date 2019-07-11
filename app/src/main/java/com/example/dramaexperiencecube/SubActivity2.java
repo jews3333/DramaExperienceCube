@@ -20,9 +20,9 @@ public class SubActivity2 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sub2);
 
-        btn_ready = findViewById(R.id.btn_ready);
-        btn_traning = findViewById(R.id.btn_traning);
-        btn_reality = findViewById(R.id.btn_reality);
+        btn_ready = (Button)findViewById(R.id.btn_ready);
+        btn_traning = (Button)findViewById(R.id.btn_traning);
+        btn_reality = (Button)findViewById(R.id.btn_reality);
 
         btn_ready.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -48,7 +48,7 @@ public class SubActivity2 extends AppCompatActivity {
             }
         });
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -57,13 +57,13 @@ public class SubActivity2 extends AppCompatActivity {
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SubActivity2.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

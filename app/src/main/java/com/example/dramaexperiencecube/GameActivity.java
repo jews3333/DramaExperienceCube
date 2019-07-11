@@ -18,13 +18,13 @@ import com.example.dramaexperiencecube.game.Game_Fragment5;
 
 public class GameActivity extends AppCompatActivity {
 
-        private FragmentManager fm;
-        private FragmentTransaction ft;
-        private Game_Fragment1 game_fragment1;
-        private Game_Fragment2 game_fragment2;
-        private Game_Fragment3 game_fragment3;
-        private Game_Fragment4 game_fragment4;
-        private Game_Fragment5 game_fragment5;
+    private FragmentManager fm;
+    private FragmentTransaction ft;
+    private Game_Fragment1 game_fragment1;
+    private Game_Fragment2 game_fragment2;
+    private Game_Fragment3 game_fragment3;
+    private Game_Fragment4 game_fragment4;
+    private Game_Fragment5 game_fragment5;
 
     Button btn_game_frag1,btn_game_frag2,btn_game_frag3,btn_game_frag4,btn_game_frag5;
     ImageButton btn_back,btn_home;
@@ -40,11 +40,11 @@ public class GameActivity extends AppCompatActivity {
         game_fragment4 = new Game_Fragment4();
         game_fragment5 = new Game_Fragment5();
 
-        btn_game_frag1 = findViewById(R.id.btn_game_frag1);
-        btn_game_frag2 = findViewById(R.id.btn_game_frag2);
-        btn_game_frag3 = findViewById(R.id.btn_game_frag3);
-        btn_game_frag4 = findViewById(R.id.btn_game_frag4);
-        btn_game_frag5 = findViewById(R.id.btn_game_frag5);
+        btn_game_frag1 = (Button)findViewById(R.id.btn_game_frag1);
+        btn_game_frag2 = (Button)findViewById(R.id.btn_game_frag2);
+        btn_game_frag3 = (Button)findViewById(R.id.btn_game_frag3);
+        btn_game_frag4 = (Button)findViewById(R.id.btn_game_frag4);
+        btn_game_frag5 = (Button)findViewById(R.id.btn_game_frag5);
 
         setFrag(0);
 
@@ -84,7 +84,7 @@ public class GameActivity extends AppCompatActivity {
         });
 
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -93,13 +93,13 @@ public class GameActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(GameActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

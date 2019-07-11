@@ -38,14 +38,14 @@ public class MovingActivity extends AppCompatActivity {
 
 
         //drawing 레이아웃에 뷰 상속
-        LinearLayout ll = findViewById(R.id.drawing);
+        LinearLayout ll = (LinearLayout)findViewById(R.id.drawing);
         final MyView m = new MyView(ll.getContext());
 
         m.setPaintInfo(color, r);
 
         ll.addView(m);
 
-        btn_black = findViewById(R.id.btn_black);
+        btn_black = (Button)findViewById(R.id.btn_black);
         btn_black.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -54,16 +54,16 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
-        btn_red = findViewById(R.id.btn_red);
+        btn_red = (Button)findViewById(R.id.btn_red);
         btn_red.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-               color = Color.RED;
-               m.setPaintInfo(color, r);
+                color = Color.RED;
+                m.setPaintInfo(color, r);
             }
         });
 
-        btn_blue = findViewById(R.id.btn_blue);
+        btn_blue = (Button)findViewById(R.id.btn_blue);
         btn_blue.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -72,7 +72,7 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
-        btn_green = findViewById(R.id.btn_green);
+        btn_green = (Button)findViewById(R.id.btn_green);
         btn_green.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -81,7 +81,7 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
-        btn_yellow = findViewById(R.id.btn_yellow);
+        btn_yellow = (Button)findViewById(R.id.btn_yellow);
         btn_yellow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -90,7 +90,7 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
-        btn_clear = findViewById(R.id.btn_clear);
+        btn_clear = (Button)findViewById(R.id.btn_clear);
         btn_clear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -101,7 +101,7 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -109,12 +109,12 @@ public class MovingActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(MovingActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });

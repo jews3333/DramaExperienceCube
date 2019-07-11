@@ -42,10 +42,10 @@ public class SoundActivity extends AppCompatActivity {
         sound_fragment3 = new Sound_Fragment3();
         sound_fragment4 = new Sound_Fragment4();
 
-        btn_sound_frag1 = findViewById(R.id.btn_sound_frag1);
-        btn_sound_frag2 = findViewById(R.id.btn_sound_frag2);
-        btn_sound_frag3 = findViewById(R.id.btn_sound_frag3);
-        btn_sound_frag4 = findViewById(R.id.btn_sound_frag4);
+        btn_sound_frag1 = (Button)findViewById(R.id.btn_sound_frag1);
+        btn_sound_frag2 = (Button)findViewById(R.id.btn_sound_frag2);
+        btn_sound_frag3 = (Button)findViewById(R.id.btn_sound_frag3);
+        btn_sound_frag4 = (Button)findViewById(R.id.btn_sound_frag4);
 
         setFrag(0);
 
@@ -74,7 +74,7 @@ public class SoundActivity extends AppCompatActivity {
             }
         });
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton)findViewById(R.id.btn_back);
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -84,12 +84,12 @@ public class SoundActivity extends AppCompatActivity {
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton)findViewById(R.id.btn_home);
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(SoundActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
@@ -122,7 +122,7 @@ public class SoundActivity extends AppCompatActivity {
     public void onSound(View view){
 
         Button btn = (Button)view;
-        String fileName = btn.getText().toString();
+        String fileName = (String) btn.getText().toString();
 
         int lib = this.getResources().getIdentifier("sound_"+fileName, "raw", this.getPackageName());
 

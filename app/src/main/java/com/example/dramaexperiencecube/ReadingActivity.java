@@ -71,7 +71,7 @@ public class ReadingActivity extends AppCompatActivity implements ScriptAdapter.
         myAdapter.setOnClickItemListener(this);
         mRecyclerView.setAdapter(myAdapter);
 
-        btn_back = findViewById(R.id.btn_back);
+        btn_back = (ImageButton) findViewById(R.id.btn_back);
 
         btn_back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -80,18 +80,18 @@ public class ReadingActivity extends AppCompatActivity implements ScriptAdapter.
             }
         });
 
-        btn_home = findViewById(R.id.btn_home);
+        btn_home = (ImageButton) findViewById(R.id.btn_home);
 
         btn_home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent intent = new Intent(ReadingActivity.this, MainActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                intent.addFlags(intent.FLAG_ACTIVITY_CLEAR_TOP);
                 startActivity(intent);
             }
         });
 
-        btn_goplan = findViewById(R.id.btn_goplan);
+        btn_goplan = (Button)findViewById(R.id.btn_goplan);
 
         // 연극 시작으로 이동
         btn_goplan.setOnClickListener(new View.OnClickListener() {
