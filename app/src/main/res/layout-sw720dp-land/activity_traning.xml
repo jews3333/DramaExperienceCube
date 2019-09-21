@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <TextView
+        style="@style/Title"
+        android:text="연극의 연습" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn_MyPlan"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:background="@drawable/btn_scenario" />
+
+        <Button
+            android:id="@+id/btn_sound"
+            android:layout_width="300dp"
+            android:layout_height="180dp"
+            android:layout_marginLeft="40dp"
+            android:background="@drawable/btn_sound" />
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Tip"
+        android:text="이제 재미있는 연극을 연습해보세요!" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome" />
+
+</RelativeLayout>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="카드 구성"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubText"
+                android:text="그림카드로 이 세상에 하나밖에 없는 연극이야기를 만들어 본다. 내가 가진 결말카드로 연극이 끝날 수 있도록 이야기를 유도하며 진행하여야 한다. 그래서 자신의 카드를 모두 소진하고 결말카드로 이야기를 끝내어야 하는 것이 목표이다."/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

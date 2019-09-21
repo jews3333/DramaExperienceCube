@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="놀이 방법" />
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubText"
+                android:text="1. 놀이 구성: 스토리카드, 히든카드, 결말카드, 놀이판\n2. 놀이 준비: 플레이어는 카드버튼을 터치할 순서를 정한다.\n3. 놀이 방법: \n  ① 플레이어가 카드버튼을 터치하면 화면의 빈 칸에 나타난 카드 그림에 맞는 표정 또는 대사로 이야기를 시작하고, 연결해서 이야기를 이어간다. \n  ② 한편의 연극 이야기를 협동하여 만들어 나간다.\n  ③ 히든카드는 곤란한 상황을 벗어날 수도 상대방을 곤란하게 만들 수도 있다.\n  ④ 결말카드가 나오면 게임이 종료된다." />
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

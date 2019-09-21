@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Title"
+        android:layout_alignParentTop="true"
+        android:text="상황과 분위기에 맞는\n효과음과 조명" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/bottom_title"
+        android:layout_below="@+id/title"
+        android:layout_centerInParent="true"
+        android:gravity="center_vertical">
+
+        <Button
+            android:id="@+id/btn_sound"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_marginRight="40dp"
+            android:background="@drawable/btn_sound" />
+
+        <!-- 삭제 -->
+        <Button
+            android:id="@+id/btn_light"
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:background="@drawable/btn_light"
+            android:visibility="gone" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/bottom_title"
+        style="@style/Tip"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="50dp"
+        android:text="다양한 효과음과 조명을 체험해보세요!" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome" />
+</RelativeLayout>

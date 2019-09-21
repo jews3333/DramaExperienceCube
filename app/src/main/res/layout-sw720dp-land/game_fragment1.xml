@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="놀이소개"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubText"
+                android:text="-스토리카드로 이 세상에 하나밖에 없는 연극이야기를 만들자. 친구들과 함께 다양한 상황과 연극기법들을 활용하며 한 편의 멋진 이야기를 펼쳐 나가자!" />
+
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

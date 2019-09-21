@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="보드게임 하는 방법"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_centerInParent="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitle"
+                android:text="게임의 진행"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="1. 첫 번째 플레이어는 각양각색 카드를 내려놓으며 카드 상황에 맞는 표정 또는 대사로 이야기를 시작한다. 한번에 2장내로 카드를 내려 놓을 수 있다. 다음 플레이어도 각양각색 카드를 내려놓으며 순서대로 이야기를 연결해서 이어간다.\n(한편의 연극 이야기를 협동하여 만들 수 있다)"/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="2. 단 카드를 내려놓을 것이 없을 때는 카드더미에서 각양각색 카드 한 장을 벌칙으로 가지고 간다."/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="3. 히든카드에는 핫시팅, 타블로, 순서 건너뛰기, 상대방 카드 하나씩 더 가지기, 상대방과 카드 전체 카드 바꾸기가 있다. 히든카드를 이용하여 곤란한 상황을 벗어날 수도 상대방을 곤란하게 만들 수도 있다."/>
+
+            <TextView
+                style="@style/SubText"
+                android:text="4. 결말카드를 포함하여 카드를 모두 소진하여야 게임이 종료되며 한편의 연극을 끝낼 수 있는 결말카드를 이용하여 연극을 완성하면 게임은 끝이 난다. 단 결말카드를 낼 때 다수가 이야기의 개연성등을 고려하여 결말을 인정해야 된다."/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

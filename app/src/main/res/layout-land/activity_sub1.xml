@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <FrameLayout
+        android:id="@+id/frame_sub1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_sub1_frag1"
+            style="@style/SubBtn"
+            android:text="연극의\n개념" />
+
+        <Button
+            android:id="@+id/btn_sub1_frag2"
+            style="@style/SubBtn"
+            android:text="연극의\n필요성과\n효과" />
+
+        <Button
+            android:id="@+id/btn_sub1_frag3"
+            style="@style/SubBtn"
+            android:text="연극의 요소" />
+
+        <Button
+            android:id="@+id/btn_sub1_frag4"
+            style="@style/SubBtn"
+            android:text="FAQ" />
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome" />
+
+</RelativeLayout>

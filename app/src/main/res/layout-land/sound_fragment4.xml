@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Title"
+        android:text="기타" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="100dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_abcde"
+                    android:onClick="onSound"
+                    android:text="abcde" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_bell"
+                    android:onClick="onSound"
+                    android:text="bell" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_bottle"
+                    android:onClick="onSound"
+                    android:text="bottle" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_ddada"
+                    android:onClick="onSound"
+                    android:text="ddada" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_ddi"
+                    android:onClick="onSound"
+                    android:text="ddi" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_drum"
+                    android:onClick="onSound"
+                    android:text="drum" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_emdwkd"
+                    android:onClick="onSound"
+                    android:text="emdwkd" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_gun"
+                    android:onClick="onSound"
+                    android:text="gun" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_miss"
+                    android:onClick="onSound"
+                    android:text="miss" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_together"
+                    android:onClick="onSound"
+                    android:text="together" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

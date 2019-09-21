@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_drama_stage"
+    tools:context=".StoryTellingEndActivity">
+
+    <ImageView
+        android:id="@+id/last_iv"
+        android:layout_width="500dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/img_last" />
+
+    <ImageView
+        android:id="@+id/children_iv"
+        android:layout_width="500dp"
+        android:layout_height="180dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
+        android:src="@drawable/img_drama_children" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome" />
+</RelativeLayout>

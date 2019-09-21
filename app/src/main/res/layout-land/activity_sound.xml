@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <FrameLayout
+        android:id="@+id/frame_sound"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <LinearLayout
+        android:id="@+id/bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="30dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_sound_frag1"
+            style="@style/SubBtn"
+            android:text="감정,\n배경음악" />
+
+        <Button
+            android:id="@+id/btn_sound_frag2"
+            style="@style/SubBtn"
+            android:text="동물,\n스포츠" />
+
+        <Button
+            android:id="@+id/btn_sound_frag3"
+            style="@style/SubBtn"
+            android:text="날씨, 교통" />
+
+        <Button
+            android:id="@+id/btn_sound_frag4"
+            style="@style/SubBtn"
+            android:text="기타" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome" />
+
+</RelativeLayout>

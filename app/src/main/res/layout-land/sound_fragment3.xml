@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        android:id="@+id/title"
+        style="@style/Title"
+        android:text="날씨, 교통" />
+
+    <ScrollView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/title"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="40dp"
+        android:layout_marginBottom="100dp"
+        android:padding="10dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_ambul"
+                    android:onClick="onSound"
+                    android:text="ambul" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_bycle"
+                    android:onClick="onSound"
+                    android:text="bycle" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_car"
+                    android:onClick="onSound"
+                    android:text="car" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_crash"
+                    android:onClick="onSound"
+                    android:text="crash" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_fire"
+                    android:onClick="onSound"
+                    android:text="fire" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_fly"
+                    android:onClick="onSound"
+                    android:text="fly" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_gunnul"
+                    android:onClick="onSound"
+                    android:text="gunnul" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_helli"
+                    android:onClick="onSound"
+                    android:text="helli" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_rain"
+                    android:onClick="onSound"
+                    android:text="rain" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_sea"
+                    android:onClick="onSound"
+                    android:text="sea" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_sea2"
+                    android:onClick="onSound"
+                    android:text="sea2" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_ship"
+                    android:onClick="onSound"
+                    android:text="ship" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_snow"
+                    android:onClick="onSound"
+                    android:text="snow" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_thunder"
+                    android:onClick="onSound"
+                    android:text="thunder" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_train"
+                    android:onClick="onSound"
+                    android:text="train" />
+
+                <Button
+                    style="@style/soundList"
+                    android:background="@drawable/btn_wubak"
+                    android:onClick="onSound"
+                    android:text="wubak" />
+
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>

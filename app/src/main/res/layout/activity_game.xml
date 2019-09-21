@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <FrameLayout
+        android:id="@+id/frame_game"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"></FrameLayout>
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="60dp"
+        android:gravity="center">
+
+        <Button
+            android:id="@+id/btn_game_frag1"
+            style="@style/SubBtn"
+            android:text="보드게임\n이란?" />
+
+        <Button
+            android:id="@+id/btn_game_frag2"
+            style="@style/SubBtn"
+            android:text="각양각색\n연극 보드게임\n목표"
+            android:textSize="18dp" />
+
+        <Button
+            android:id="@+id/btn_game_frag3"
+            style="@style/SubBtn"
+            android:text="게임준비" />
+
+        <Button
+            android:id="@+id/btn_game_frag4"
+            style="@style/SubBtn"
+            android:text="카드소개" />
+
+        <Button
+            android:id="@+id/btn_game_frag5"
+            style="@style/SubBtn"
+            android:text="보드게임\n하는 방법" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack" />
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome" />
+
+</RelativeLayout>

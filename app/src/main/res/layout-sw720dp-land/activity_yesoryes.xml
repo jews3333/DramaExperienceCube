@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    style="@style/Background3">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Title"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Yes or Yes\n즉흥극"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:text="당신이 "
+            android:textColor="#fff"
+            android:textSize="44sp" />
+
+        <TextView
+            android:id="@+id/txt_Level1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="#ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="1수준"
+            android:textAlignment="center"
+            android:textColor="#009e96"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txt_Level2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:background="#ffffff"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:text="2수준"
+            android:textAlignment="center"
+            android:textColor="#ae5da1"
+            android:textSize="60sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="그 사람인가요?"
+            android:textColor="#fff"
+            android:textSize="44sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:layout_marginBottom="70dp">
+
+        <Button
+            android:id="@+id/btn_Level1"
+            android:background="@drawable/cycle_button3"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:textColor="#009e96"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="1수준"/>
+
+        <Button
+            android:id="@+id/btn_All_Level"
+            android:background="@drawable/cycle_button2"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:textColor="#fff"
+            android:textSize="32sp"
+            android:textStyle="bold"
+            android:layout_marginLeft="200dp"
+            android:layout_marginRight="200dp"
+            android:text="전체"/>
+
+        <Button
+            android:id="@+id/btn_Level2"
+            android:background="@drawable/cycle_button3"
+            android:layout_width="120dp"
+            android:layout_height="60dp"
+            android:textColor="#ae5da1"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:text="2수준" />
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
+
+    <ImageButton
+        android:id="@+id/btn_help"
+        style="@style/BtnHelp"/>
+
+
+</RelativeLayout>

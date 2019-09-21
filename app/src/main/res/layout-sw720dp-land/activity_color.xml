@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background">
+
+    <TextView
+        style="@style/Title"
+        android:text="다양한\n감정표현 익히기"
+        android:layout_marginTop="20dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:layout_marginBottom="15dp">
+            <Button
+                android:id="@+id/btn_Red"
+                android:background="@drawable/button_red"
+                style="@style/BtnSize"
+                android:text="Red"
+                android:textColor="#fff"
+                android:layout_marginRight="15dp"/>
+
+            <Button
+                android:id="@+id/btn_Yellow"
+                android:background="@drawable/button_yellow"
+                style="@style/BtnSize"
+                android:text="Yellow"
+                android:textColor="#412605"/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center">
+            <Button
+                android:id="@+id/btn_Blue"
+                android:background="@drawable/button_blue"
+                style="@style/BtnSize"
+                android:text="Blue"
+                android:textColor="#0B173C"
+                android:layout_marginRight="15dp"/>
+
+            <Button
+                android:id="@+id/btn_Gray"
+                android:background="@drawable/button_gray"
+                style="@style/BtnSize"
+                android:text="Gray"
+                android:textColor="#FFFFFF"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        style="@style/Tip"
+        android:text="다양한 감정표현을 체험하고 따라해보세요!"/>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
+
+</RelativeLayout>

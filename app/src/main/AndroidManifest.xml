@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.dramaexperiencecube">
+    <!-- 저장소 읽기 권한 -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" /> <!-- 저장소 쓰기 권한 -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" /> <!-- 오디오 재생 권한 -->
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher_play"
+        android:installLocation="preferExternal"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_play_round"
+        android:screenOrientation="landscape"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".StoryTellingEndActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".StoryTellingActivity"
+            android:screenOrientation="landscape">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ReadingListActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MainActivity"
+            android:screenOrientation="landscape">
+
+        </activity>
+        <activity
+            android:name=".SubActivity1"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SubActivity2"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ReadyActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".TraningActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".RealityActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ReadingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".ColorActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".color.Red"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".color.Blue"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".color.Yellow"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".color.Gray"
+            android:screenOrientation="landscape"
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen" />
+        <activity
+            android:name=".YesoryesActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MyPlanActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".PlayReadingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".MovingActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".GameActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".EffectsActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".SoundActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".LicenseActivity"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name=".YesorysesHelpActivity"
+            android:screenOrientation="landscape" />
+    </application>
+
+</manifest>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background4">
+
+    <TextView
+        android:id="@+id/textView"
+        style="@style/Title"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Yes or Yes\n즉흥극이란?"/>
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubTitle2"
+                android:text="Yes의 힘" />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="캐나다 캘거리 대학의 명예교수이며 루스 무스극단의 예술 감독인 키스 존스톤은 사람들의 상상력을 믿었고 어떤 준비도 필요 없는 즉흥극을 만든다." />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="그가 배우들에게 요구한 한 가지는 상대방의 대사에 무조건 YES라고 외칠 것! " />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="“당신이 웃기게 걷는다는 그 사람인가요?”" />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="“아닌데요. 사람 잘못 봤어요.” " />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="NO라고 말하면 장면은 맥없이 끝나지만 YES라고 말하면" />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="“당신이 웃기게 걷는다는 그 사람인가요?”" />
+
+            <TextView
+                style="@style/SubText2"
+                android:text="“맞아요. 제가 그 사람입니다. 반가워요.”" />
+
+            <TextView
+                style="@style/SubTitle2"
+                android:text="새로운 상상과 이야기를 만들어내는 YES의 힘" />
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/btn_media"
+        style="@style/BtnStart"
+        android:text="동영상 보기"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="80dp"/>
+
+    <LinearLayout
+        android:id="@+id/media_wrap"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:background="#000"
+        android:visibility="gone">
+
+        <VideoView
+            android:id="@+id/media"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        style="@style/BtnBack"/>
+
+    <ImageButton
+        android:id="@+id/btn_home"
+        style="@style/BtnHome"/>
+
+</RelativeLayout>

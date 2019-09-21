@@ -1,0 +1,4 @@
+keystorepath 폴더내 dramacub_keystore.jks
+key store password : dramacube
+key ailas : dramacube
+password : dramacube

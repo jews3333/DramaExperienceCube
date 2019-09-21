@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/Background_game">
+
+    <ImageView
+        android:id="@+id/arrow1"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/im_game_arrow_01"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow2"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginRight="80dp"
+        android:background="@drawable/im_game_arrow_02"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow4"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginLeft="80dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/im_game_arrow_04"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <ImageView
+        android:id="@+id/arrow3"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_marginRight="80dp"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/im_game_arrow_03"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+
+    <ImageView
+        android:id="@+id/board01_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_game_start"
+        app:layout_constraintLeft_toRightOf="@+id/arrow1"
+        app:layout_constraintRight_toLeftOf="@+id/board02_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/board02_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="20dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintLeft_toRightOf="@+id/board01_iv"
+        app:layout_constraintRight_toLeftOf="@+id/board03_iv"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/board03_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintLeft_toRightOf="@+id/board02_iv"
+        app:layout_constraintRight_toLeftOf="@+id/arrow2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/board04_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="60dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintBottom_toTopOf="@+id/arrow3"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrow2" />
+
+    <ImageView
+        android:id="@+id/board05_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/board06_iv"
+        app:layout_constraintRight_toLeftOf="@+id/arrow3" />
+
+    <ImageView
+        android:id="@+id/board06_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/board07_iv"
+        app:layout_constraintRight_toLeftOf="@+id/board05_iv" />
+
+    <ImageView
+        android:id="@+id/board07_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@+id/arrow4"
+        app:layout_constraintRight_toLeftOf="@+id/board06_iv" />
+
+    <ImageView
+        android:id="@+id/board08_iv"
+        android:layout_width="80dp"
+        android:layout_height="120dp"
+        android:layout_marginLeft="60dp"
+        android:layout_marginTop="5dp"
+        android:background="@drawable/bg_game_card"
+        app:layout_constraintBottom_toTopOf="@+id/arrow3"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/arrow1" />
+
+    <ImageView
+        android:id="@+id/storycard_iv"
+        android:layout_width="80dp"
+        android:layout_height="0dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/im_game_story_card"
+        app:layout_constraintBottom_toTopOf="@+id/board07_iv"
+        app:layout_constraintLeft_toRightOf="@+id/board08_iv"
+        app:layout_constraintTop_toBottomOf="@+id/board01_iv" />
+
+    <ImageView
+        android:id="@+id/start_iv"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/btn_game_start"
+        app:layout_constraintBottom_toTopOf="@+id/end_iv"
+        app:layout_constraintLeft_toRightOf="@+id/storycard_iv"
+        app:layout_constraintRight_toLeftOf="@+id/board04_iv"
+        app:layout_constraintTop_toBottomOf="@+id/board01_iv"
+        app:layout_constraintVertical_chainStyle="packed" />
+
+    <ImageView
+        android:id="@+id/end_iv"
+        android:layout_width="150dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/btn_game_end"
+        app:layout_constraintBottom_toTopOf="@+id/board05_iv"
+        app:layout_constraintLeft_toRightOf="@+id/storycard_iv"
+        app:layout_constraintRight_toLeftOf="@+id/board04_iv"
+        app:layout_constraintTop_toBottomOf="@+id/start_iv" />
+
+
+</android.support.constraint.ConstraintLayout>

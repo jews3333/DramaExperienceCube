@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/Background2">
+
+    <TextView
+        style="@style/Title"
+        android:text="카드 구성" />
+
+    <ScrollView
+        style="@style/Container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/SubText"
+                android:text="-스토리카드: 다양한 상황의 그림(5,6학년 교과서 속 그림)과 대사가 적힌 카드\n-히든카드: 연극기법(핫시팅, 타블로 등), 게임적 요소(순서 건너뛰기 등)이 포함된 카드\n-결말카드: 연극놀이의 목표로 도달하기 위한 카드, 다양한 결말이 적혀 있는 카드" />
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>
